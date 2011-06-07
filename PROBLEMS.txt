@@ -1,1 +1,0 @@
-1.) Springtools (and Eclipse) wont properly integrate with Tomcat.
