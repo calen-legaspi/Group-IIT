@@ -13,6 +13,7 @@ import java.util.Set;
  */
 public class Inventory {
 
+	private int id;
 	private Set<InventoryItem> inventoryItems;
 
 	/**
@@ -25,13 +26,15 @@ public class Inventory {
 	/**
 	 * This constructor will serve its purpose on reconstruction of a persisted instance.
 	 * @param inventoryItems The Set of InventoryItems to add to the inventory.
+	 * @param id The id of the inventory, auto-generated after inserting into the database.
 	 * @exception IllegalArgumentException Throws this exception when the argument is null.
 	 */
-	public Inventory(Set<InventoryItem> inventoryItems) throws IllegalArgumentException {
+	public Inventory(int id, Set<InventoryItem> inventoryItems) throws IllegalArgumentException {
 		this();
 		if(inventoryItems == null) {
 			throw new IllegalArgumentException("Inventory items cant be null.");
 		}
+		this.id = id;
 		this.inventoryItems = inventoryItems;
 	}
 	

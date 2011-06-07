@@ -22,15 +22,13 @@ public class Customer {
 	
 	/**
 	 * Use this to instantiate a new Customer.
-	 * @param id The customer's serial number.
 	 * @param name The name of the customer.
-	 * @exception IllegalArgumentException Throws this exception when at least one of the argument has invalid values such as null.
+	 * @exception IllegalArgumentException if at least one of the argument has invalid values such as null.
 	 */
-	public Customer(int id, String name) throws IllegalArgumentException {
+	public Customer(String name) throws IllegalArgumentException {
 		if(name == null || name.equals("")) {
 			throw new IllegalArgumentException("Name cannot be null or empty.");
 		}
-		this.id = id;
 		this.name = name;
 		this.orders = new HashSet<Order>();
 	}
@@ -40,13 +38,14 @@ public class Customer {
 	 * @param id The unique id of the Customer.
 	 * @param name The full name of the Customer.
 	 * @param orders The Set of Orders owned by the Customer. 
-	 * @exception IllegalArgumentException Throws this exception when at least one of the argument is contains an illegal value such as null.
+	 * @exception IllegalArgumentException if at least one of the argument is contains an illegal value such as null.
 	 */
 	public Customer(int id, String name, Set<Order> orders) throws IllegalArgumentException {
-		this(id,name);
+		this(name);
 		if(name == null || orders == null) {
 			throw new IllegalArgumentException("One of the parameter is null.");
 		}
+		this.id = id;
 		this.orders = orders;
 	}
 	
@@ -74,10 +73,10 @@ public class Customer {
 	
 	/**
 	 * Adds the new Order to the list of orders by the customer. If the Order already exists in the customer's list of orders, the former is updated with the value of the new one.
-	 * @param newOrder an Order to be added later
+	 * @param newOrder an Order to be added
 	 */
 	public void addOrder(Order newOrder) {
-		throw new UnsupportedOperationException("Operation Not Yet Implemented.");
+		orders.add(newOrder);
 	}
 	
 	/**
@@ -90,7 +89,7 @@ public class Customer {
 	/**
 	 * @param o The object to compare the equality of this Customer.
 	 * @return True if the Customer is equivalent to the parameter, otherwise false.
-	 * @exception IllegalArgumentException Throws this exception when the parameter is either null of not a Customer instance.
+	 * @exception IllegalArgumentException if the parameter is either null of not a Customer instance.
 	 */
 	@Override
 	public boolean equals(Object o) throws IllegalArgumentException {

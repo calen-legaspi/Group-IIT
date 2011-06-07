@@ -14,6 +14,7 @@ import java.math.BigDecimal;
  */
 public class OrderItem {
 
+	private int id;
 	private int quantity;
 	private Product product;
 	
@@ -28,6 +29,18 @@ public class OrderItem {
 		}
 		this.product = product;
 		this.quantity = quantity;
+	}
+	
+	/**
+	 * A constructor designed for reconstructing an instance stored in the database.
+	 * @param id The id generated after this has been inserted into the database.
+	 * @param product
+	 * @param quantity
+	 * @throws IllegalArgumentException if the product is null.
+	 */
+	public OrderItem(int id, Product product, int quantity) throws IllegalArgumentException {
+		this(product, quantity);
+		this.id = id;
 	}
 	
 	/**

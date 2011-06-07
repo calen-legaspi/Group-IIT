@@ -5,6 +5,7 @@ package com.onb.orderingsystem.domain;
  * @version 1.0
  * @created 07-Jun-2011 8:11:10 AM
  */
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -20,17 +21,29 @@ public class Order {
 	private int orderNumber;
 	private Date date;
 	private Set<OrderItem> orderItems;
+	
+	/*
+	 * A reference to the customer owning this order.
+	 * Most calculations (on the discount and the credit limit),
+	 * pretty much involves the records held by the customer (other orders). 
+	 */
 	private Customer customer;
 	private OrderStatus orderStatus;
 	private DiscountStatus discountStatus;
+	
+	/*
+	 * The record to the amount paid at the time of payment.
+	 * You're pretty much screwed if you don't keep tabs on the amount.
+	 * The payment may vary depending on the amount previously paid.
+	 */
+	private BigDecimal amountPaid;
 	
 	/**
 	 * A constructor that creates a new Order instance.
 	 * Sets the date field to the current date and the OrderStatus to "PROCESSING".
 	 * @param orderNumber Should be unique, equality checks are based on this.
 	 */
-	public Order(int orderNumber) {
-		this.orderNumber = orderNumber;
+	public Order() {
 		this.date = new Date();
 		this.orderItems = new LinkedHashSet<OrderItem>();
 		this.orderStatus = OrderStatus.PROCESSING;
@@ -45,7 +58,8 @@ public class Order {
 	 * @throws IllegalArgumentException Throws this exception when one of the argument has an illegal value.
 	 */
 	public Order(int orderumber, Date date, Set<OrderItem> orderItems, OrderStatus orderStatus) throws IllegalArgumentException {
-		this(orderumber);
+		this();
+		this.orderNumber = orderumber;
 		this.date = date;
 		this.orderItems = orderItems;
 		this.orderStatus = orderStatus;

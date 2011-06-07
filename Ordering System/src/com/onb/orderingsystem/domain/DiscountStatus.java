@@ -15,7 +15,7 @@ import java.math.BigDecimal;
   */
 public enum DiscountStatus {
 	
-	NO_DISCOUNT(new BigDecimal("0.00")),
+	NO_DISCOUNT(new BigDecimal("0.00")), //default
 	TEN_PERCENT(new BigDecimal("0.10"));
 
 	private BigDecimal discountRate;
@@ -24,6 +24,11 @@ public enum DiscountStatus {
 		this.discountRate = discountRate;
 	}
 	
+	/**
+	 * Performs a calculation on the parameter to retreive the amount when this discount is applied.
+	 * @param originalAmount The amount without a discount.
+	 * @return The amount after this discount is applied.
+	 */
 	public BigDecimal applyDiscount(BigDecimal originalAmount) {
 		return originalAmount.subtract(originalAmount.multiply(discountRate));
 	}

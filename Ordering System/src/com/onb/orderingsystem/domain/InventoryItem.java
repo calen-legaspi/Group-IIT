@@ -11,6 +11,7 @@ package com.onb.orderingsystem.domain;
  */
 public class InventoryItem {
 
+	private int id;
 	private int quantity;
 	private Product product;
 	
@@ -26,6 +27,18 @@ public class InventoryItem {
 		}
 		this.product = product;
 		this.quantity = quantity;
+	}
+	
+	/**
+	 * Constructor for reconstructing an instance persisted into the database.
+	 * @param id The id generated after inserting this into the database.
+	 * @param product The Product to add to the inventory. Can't be changed.
+	 * @param quantity The quantity of the item to store in the inventory.
+	 * @throws IllegalArgumentException Throws this exception when the argument
+	 */
+	public InventoryItem(int id, Product product, int quantity) {
+		this(product, quantity);
+		this.id = id;
 	}
 	
 	/**
