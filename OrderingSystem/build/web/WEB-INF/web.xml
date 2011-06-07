@@ -4,9 +4,17 @@
         <servlet-name>HomeServlet</servlet-name>
         <servlet-class>com.onb.orderingsystem.controllers.HomeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>NewOrderServlet</servlet-name>
+        <servlet-class>com.onb.orderingsystem.controllers.NewOrderServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/Home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewOrderServlet</servlet-name>
+        <url-pattern>/NewOrder</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
