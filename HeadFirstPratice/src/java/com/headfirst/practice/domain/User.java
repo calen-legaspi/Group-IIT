@@ -5,7 +5,7 @@ package com.headfirst.practice.domain;
  * 
  */
 public class User {
-    public int id;
+    private int id;
     private String username;
     private String password;
     
