@@ -21,13 +21,6 @@ public class Order {
 	private int orderNumber;
 	private Date date;
 	private Set<OrderItem> orderItems;
-	
-	/*
-	 * A reference to the customer owning this order.
-	 * Most calculations (on the discount and the credit limit),
-	 * pretty much involves the records held by the customer (other orders). 
-	 */
-	private Customer customer;
 	private OrderStatus orderStatus;
 	private DiscountStatus discountStatus;
 	

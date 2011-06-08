@@ -1,4 +1,4 @@
-package com.onb.orderingsystem.domain;
+package com.onb.orderingsystem.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -34,7 +34,6 @@ public class UserTest {
         System.out.println("Field Name: Field Value (Data Type)");
         for(Field f:fs) {    
             f.setAccessible(true);
-            
             System.out.println(f.getName()+":"+f.get(u)+"("+f.getType()+")");
         }
     }
