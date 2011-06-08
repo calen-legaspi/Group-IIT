@@ -2,6 +2,7 @@ package com.onb.orderingsystem.domain;
 
 import static org.junit.Assert.*;
 
+
 import java.math.BigDecimal;
 import java.util.LinkedHashSet;
 import java.util.Set;
