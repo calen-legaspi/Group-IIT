@@ -32,7 +32,7 @@ public enum OrderStatus {
 	/**
 	 * The Order is on credit terms. Can be changed to PAID when the Customer pays up.<br/>
 	 * When upgraded to this state, orderItems can no longer be modified.
-	 * During the upgrade, respective InventoryItems should be update to reflect the quantity deductions.
+	 * During the upgrade, respective InventoryItems should be updated to reflect the quantity deductions.
 	 */
 	ON_CREDIT,
 	
