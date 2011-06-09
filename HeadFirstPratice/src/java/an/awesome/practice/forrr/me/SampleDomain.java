@@ -7,8 +7,7 @@ package an.awesome.practice.forrr.me;
 import java.util.Date;
 
 /**
- *
- * @author lyndon
+ * The path to the God DAO. 
  */
 public class SampleDomain {
     private int id;
@@ -23,4 +22,13 @@ public class SampleDomain {
     
     private SomeEnum someEnum;
     
+    public SampleDomain() {
+        id = 1;
+        someBoxedInteger = 11;
+        someString = "some stupid string";
+        someDate = new Date();
+        somePrimitiveFloat = 100F;
+        someTransientThing = 1;
+        someEnum = SomeEnum.VALUE2;
+    }
 }

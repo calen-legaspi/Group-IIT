@@ -5,8 +5,8 @@
 package an.awesome.practice.forrr.me;
 
 /**
- *
- * @author lyndon
+ * Annotation for domain fields not meant for persistence.
+ * 
  */
 public @interface Transient {
     
