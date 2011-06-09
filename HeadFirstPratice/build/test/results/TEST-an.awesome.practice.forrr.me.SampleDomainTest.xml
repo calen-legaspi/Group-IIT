@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="lyndon" name="an.awesome.practice.forrr.me.SampleDomainTest" tests="1" time="0.066" timestamp="2011-06-09T06:06:38">
+<testsuite errors="0" failures="0" hostname="lyndon" name="an.awesome.practice.forrr.me.SampleDomainTest" tests="1" time="0.073" timestamp="2011-06-09T07:44:46">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="PH" />
@@ -479,12 +479,12 @@
     <property name="platform.active" value="default_platform" />
     <property name="war.ear.name" value="HeadFirstPratice.war" />
   </properties>
-  <testcase classname="an.awesome.practice.forrr.me.SampleDomainTest" name="testSomeMethod" time="0.0080" />
+  <testcase classname="an.awesome.practice.forrr.me.SampleDomainTest" name="testSomeMethod" time="0.0070" />
   <system-out><![CDATA[Field Name: Field Value (Data Type) for the class an.awesome.practice.forrr.me.SampleDomain
 id:1(int)
 someBoxedInteger:11(class java.lang.Integer)
 someString:some stupid string(class java.lang.String)
-someDate:Thu Jun 09 14:06:38 PHT 2011(class java.util.Date)
+someDate:Thu Jun 09 15:44:46 PHT 2011(class java.util.Date)
 somePrimitiveFloat:100.0(float)
 someBoxedFloat:null(class java.lang.Float)
 someTransientThing:1(int)

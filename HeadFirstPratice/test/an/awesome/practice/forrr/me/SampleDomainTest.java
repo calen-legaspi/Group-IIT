@@ -30,11 +30,14 @@ public class SampleDomainTest {
         System.out.println("Field Name: Field Value (Data Type) for the "+c);
         for(Field f:fields) {    
             f.setAccessible(true);
-            Annotation[] a = f.getDeclaredAnnotations();
-            for(Annotation as: a) {
-                System.out.println(as);
-            }
+            
             System.out.println(f.getName()+":"+f.get(s)+"("+f.getType()+")");
         }
+         
+        fields[0].setAccessible(true);
+        fields[0].setInt(s,12);
+        
+        System.out.print(fields[0].get(s));
+        System.out.print(fields[6].isAnnotationPresent(Transient.class));
     }
 }
