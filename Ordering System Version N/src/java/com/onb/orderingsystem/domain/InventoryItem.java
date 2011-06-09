@@ -57,7 +57,7 @@ public class InventoryItem {
      */
     public int getId() throws IllegalStateException {
         if(id == 0) {
-            throw new IllegalStateException("Id not yet generated");
+            throw new IllegalStateException("Id not yet generated at this state. Id generated after insertion.");
         }
         return id;
     }

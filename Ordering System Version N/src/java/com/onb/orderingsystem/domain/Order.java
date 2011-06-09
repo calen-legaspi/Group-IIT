@@ -54,6 +54,7 @@ public class Order {
         this.orderStatus = orderStatus;
         this.discountStatus = discountStatus;
         this.amount = amount;
+        updateAmount();
     }
 
     /**

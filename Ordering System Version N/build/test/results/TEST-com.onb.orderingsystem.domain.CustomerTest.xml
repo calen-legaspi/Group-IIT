@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.CustomerTest" tests="3" time="0.066" timestamp="2011-06-09T03:08:07">
+<testsuite errors="0" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.CustomerTest" tests="3" time="0.06" timestamp="2011-06-09T03:13:05">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="PH" />
@@ -480,7 +480,7 @@
     <property name="war.ear.name" value="Ordering_System_Version_N.war" />
   </properties>
   <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetAmountOfUnpaidOrders" time="0.0060" />
-  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetAmountOfPaidOrders" time="0.0010" />
+  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetAmountOfPaidOrders" time="0.0" />
   <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetCreditLimit" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

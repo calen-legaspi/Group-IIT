@@ -1,7 +1,6 @@
 package com.onb.orderingsystem.domain;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
 
 /**
  * OrderItems represent the items included in the Order.
