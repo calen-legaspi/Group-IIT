@@ -8,5 +8,5 @@
 *.netbeans_automatic_build
 *.netbeans_update_resources
 *.eap
-build.xml
+*build.xml
 
