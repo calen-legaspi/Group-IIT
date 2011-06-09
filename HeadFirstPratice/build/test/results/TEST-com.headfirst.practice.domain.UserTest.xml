@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="0" hostname="lyndon" name="com.headfirst.practice.domain.UserTest" tests="1" time="0.077" timestamp="2011-06-09T05:09:05">
+<testsuite errors="0" failures="0" hostname="lyndon" name="com.headfirst.practice.domain.UserTest" tests="1" time="0.264" timestamp="2011-06-09T06:06:39">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="PH" />
-    <property name="javac.test.classpath" value="/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/web/WEB-INF/classes:/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar:/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
+    <property name="javac.test.classpath" value="/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/web/WEB-INF/classes:/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar:/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
     <property name="libs.jsf20.maven-pom" value="" />
     <property name="libs.DataBindingME.src" value="/home/lyndon/netbeans-7.0/mobility/sources/netbeans_databindingme-src.zip" />
     <property name="libs.j2me_ant_ext.javadoc" value="" />
@@ -90,7 +90,7 @@
     <property name="libs.jstl11.javadoc" value="/home/lyndon/netbeans-7.0/enterprise/docs/javaee6-doc-api.zip" />
     <property name="libs.JMUnit4CLDC11.src" value="" />
     <property name="javadoc.encoding" value="UTF-8" />
-    <property name="javac.classpath" value="/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
+    <property name="javac.classpath" value="/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
     <property name="libs.jsp-compilation-syscp.src" value="" />
     <property name="do.debug.server" value="true" />
     <property name="debug-transport" value="dt_socket" />
@@ -135,7 +135,7 @@
     <property name="platforms.Sun_Java_TM__Wireless_Toolkit_2_5_2_for_CLDC.home" value="/home/lyndon/netbeans-7.0/mobility/WTK2.5.2" />
     <property name="libs.junit_4.maven-pom" value="" />
     <property name="resource.dir" value="setup" />
-    <property name="javac.test.processorpath" value="/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/web/WEB-INF/classes:/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar:/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
+    <property name="javac.test.processorpath" value="/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/web/WEB-INF/classes:/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar:/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
     <property name="netbeans.buildnumber" value="201104080000" />
     <property name="libs.JWSAntTasks.javadoc" value="" />
     <property name="build.generated.sources.dir" value="build/generated-sources" />
@@ -184,7 +184,7 @@
     <property name="org.whattf.datatype.charset-registry" value="jar:file:/home/lyndon/netbeans-7.0/ide/modules/ext/validator.jar!/nu/validator/localentities/files/www_iana_org_assignments_character_sets" />
     <property name="libs.primefaces.javadoc" value="" />
     <property name="libs.spring-framework300.maven-pom" value="" />
-    <property name="run.test.classpath" value="/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/web/WEB-INF/classes:/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar:/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/test/classes" />
+    <property name="run.test.classpath" value="/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/web/WEB-INF/classes:/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar:/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/test/classes" />
     <property name="ant.project.invoked-targets" value="test" />
     <property name="useJavaUtilZip" value="true" />
     <property name="libs.swing-layout.javadoc" value="/home/lyndon/netbeans-7.0/platform/docs/swing-layout-1.0.4-doc.zip" />
@@ -221,7 +221,7 @@
     <property name="libs.ricoh-ant-utils.src" value="" />
     <property name="libs.spring-webmvc.src" value="" />
     <property name="libs.ant-contrib.javadoc" value="" />
-    <property name="debug.test.classpath" value="/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/web/WEB-INF/classes:/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar:/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/test/classes" />
+    <property name="debug.test.classpath" value="/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/web/WEB-INF/classes:/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar:/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:build/test/classes" />
     <property name="libs.javaee-endorsed-api-6.0.classpath" value="/home/lyndon/netbeans-7.0/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
     <property name="libs.javaee-api-6.0.src" value="" />
     <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
@@ -262,7 +262,7 @@
     <property name="sun.java2d.noddraw" value="true" />
     <property name="libs.jsp-compiler.classpath" value="/home/lyndon/netbeans-7.0/enterprise/ant/extra/jspcompile.jar" />
     <property name="dist.ear.war" value="dist/HeadFirstPratice.war" />
-    <property name="javac.processorpath" value="/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
+    <property name="javac.processorpath" value="/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
     <property name="platforms.Sun_Java_TM__Wireless_Toolkit_2_5_2_for_CLDC.type" value="UEI-1.0.1" />
     <property name="libs.spring-webmvc.classpath" value="/home/lyndon/netbeans-7.0/enterprise/modules/ext/spring/spring-webmvc-2.5.6.SEC01.jar" />
     <property name="javac.compilerargs" value="" />
@@ -293,7 +293,7 @@
     <property name="deploy.ant.properties.file" value="/home/lyndon/.netbeans/7.0/tomcat70.properties" />
     <property name="have.sources" value="true" />
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/i386" />
-    <property name="debug.classpath" value="build/web/WEB-INF/classes:/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
+    <property name="debug.classpath" value="build/web/WEB-INF/classes:/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
     <property name="war.name" value="HeadFirstPratice.war" />
     <property name="javadoc.private" value="false" />
     <property name="test.src.dir" value="test" />
@@ -390,7 +390,7 @@
     <property name="libs.restlib_gfv3ee6.javadoc" value="/home/lyndon/netbeans-7.0/enterprise/docs/jsr311-api-1.1.1-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/jersey-client-1.3-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/jersey-json-1.3-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/jersey-multipart-1.3-javadoc.zip" />
     <property name="web.docbase.dir" value="web" />
     <property name="libs.primefaces.src" value="" />
-    <property name="file.reference.mysql-connector-java-5.1.16-bin.jar" value="/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
+    <property name="file.reference.mysql-connector-java-5.1.16-bin.jar" value="/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar" />
     <property name="libs.cdc-agui-swing-layout.classpath" value="/home/lyndon/netbeans-7.0/mobility/modules/ext/cdc-agui-swing-layout.jar" />
     <property name="dist.dir" value="dist" />
     <property name="libs.groovy-all.javadoc" value="" />
@@ -433,7 +433,7 @@
     <property name="libs.restlib.maven-pom" value="" />
     <property name="libs.DataBindingME.javadoc" value="/home/lyndon/netbeans-7.0/mobility/modules/docs/netbeans_databindingme-api.zip" />
     <property name="apple.laf.useScreenMenuBar" value="true" />
-    <property name="java.class.path" value="/home/lyndon/Downloads/Trash/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:/home/lyndon/Downloads/Git Repository/Group-IIT/HeadFirstPratice/build/web/WEB-INF/classes:/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar:/home/lyndon/Downloads/Git Repository/Group-IIT/HeadFirstPratice/build/test/classes:/home/lyndon/apache-tomcat-7.0.14/lib/catalina-tribes.jar:/home/lyndon/apache-tomcat-7.0.14/lib/annotations-api.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-api.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-dbcp.jar:/home/lyndon/apache-tomcat-7.0.14/lib/servlet-api.jar:/home/lyndon/apache-tomcat-7.0.14/lib/jsp-api.jar:/home/lyndon/apache-tomcat-7.0.14/lib/jasper.jar:/home/lyndon/apache-tomcat-7.0.14/lib/ecj-3.6.2.jar:/home/lyndon/apache-tomcat-7.0.14/lib/catalina.jar:/home/lyndon/apache-tomcat-7.0.14/lib/catalina-ant.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-i18n-fr.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-coyote.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-i18n-es.jar:/home/lyndon/apache-tomcat-7.0.14/lib/jasper-el.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-i18n-ja.jar:/home/lyndon/apache-tomcat-7.0.14/lib/el-api.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-util.jar:/home/lyndon/apache-tomcat-7.0.14/lib/catalina-ha.jar:/home/lyndon/netbeans-7.0/java/ant/lib/ant-launcher.jar:/home/lyndon/netbeans-7.0/java/ant/lib/ant.jar:/home/lyndon/netbeans-7.0/java/ant/lib/ant-junit.jar:/home/lyndon/netbeans-7.0/java/ant/lib/ant-junit4.jar" />
+    <property name="java.class.path" value="/home/lyndon/Downloads/Git Repository/Group-IIT/Basurahan/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar:/home/lyndon/Downloads/Git Repository/Group-IIT/HeadFirstPratice/build/web/WEB-INF/classes:/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar:/home/lyndon/Downloads/Git Repository/Group-IIT/HeadFirstPratice/build/test/classes:/home/lyndon/apache-tomcat-7.0.14/lib/catalina-tribes.jar:/home/lyndon/apache-tomcat-7.0.14/lib/annotations-api.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-api.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-dbcp.jar:/home/lyndon/apache-tomcat-7.0.14/lib/servlet-api.jar:/home/lyndon/apache-tomcat-7.0.14/lib/jsp-api.jar:/home/lyndon/apache-tomcat-7.0.14/lib/jasper.jar:/home/lyndon/apache-tomcat-7.0.14/lib/ecj-3.6.2.jar:/home/lyndon/apache-tomcat-7.0.14/lib/catalina.jar:/home/lyndon/apache-tomcat-7.0.14/lib/catalina-ant.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-i18n-fr.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-coyote.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-i18n-es.jar:/home/lyndon/apache-tomcat-7.0.14/lib/jasper-el.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-i18n-ja.jar:/home/lyndon/apache-tomcat-7.0.14/lib/el-api.jar:/home/lyndon/apache-tomcat-7.0.14/lib/tomcat-util.jar:/home/lyndon/apache-tomcat-7.0.14/lib/catalina-ha.jar:/home/lyndon/netbeans-7.0/java/ant/lib/ant-launcher.jar:/home/lyndon/netbeans-7.0/java/ant/lib/ant.jar:/home/lyndon/netbeans-7.0/java/ant/lib/ant-junit.jar:/home/lyndon/netbeans-7.0/java/ant/lib/ant-junit4.jar" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.cdc-pp-awt-layout.maven-pom" value="" />
     <property name="j2ee.server.type" value="Tomcat70" />
@@ -479,13 +479,7 @@
     <property name="platform.active" value="default_platform" />
     <property name="war.ear.name" value="HeadFirstPratice.war" />
   </properties>
-  <testcase classname="com.headfirst.practice.domain.UserTest" name="testSomeMethod" time="0.02">
-    <error message="No suitable driver found for jdbc:mysql:localhost" type="java.sql.SQLException">java.sql.SQLException: No suitable driver found for jdbc:mysql:localhost
-	at java.sql.DriverManager.getConnection(DriverManager.java:602)
-	at java.sql.DriverManager.getConnection(DriverManager.java:185)
-	at com.headfirst.practice.domain.UserTest.testSomeMethod(UserTest.java:60)
-</error>
-  </testcase>
+  <testcase classname="com.headfirst.practice.domain.UserTest" name="testSomeMethod" time="0.209" />
   <system-out><![CDATA[Field Name: Field Value (Data Type)
 id:1(int)
 username:User1(class java.lang.String)

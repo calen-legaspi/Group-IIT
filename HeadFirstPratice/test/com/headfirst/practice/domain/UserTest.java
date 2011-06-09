@@ -14,7 +14,6 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import com.mysql.jdbc.*;
 
 /**
  *
@@ -56,14 +55,19 @@ public class UserTest {
         Connection con = null;
         PreparedStatement pstmt = null;
 
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            System.out.println("Driver class not found in classpath");
+            //handle exception here
+        }
 
-        con = DriverManager.getConnection("jdbc:mysql:localhost", "root", "password");
+
+        con = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test", "root", "password");
 
         pstmt = con.prepareStatement(
-                "UPDATE EMPLOYEES SET CAR_NUMBER = ? "
-                + "WHERE EMPLOYEE_NUMBER = ?");
-        pstmt.setInt(1, 1);
-        pstmt.setInt(2, 2);
+                "INSERT INTO testing(name) VALUES(?)");
+        pstmt.setString(1, "Waahhahahahahha");
         pstmt.executeUpdate();
 
     }
