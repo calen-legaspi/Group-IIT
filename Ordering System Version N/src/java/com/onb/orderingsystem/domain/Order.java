@@ -42,12 +42,14 @@ public class Order {
      * @param orderStatus The status of the order.
      * @throws IllegalArgumentException Throws this exception when one of the argument has an illegal value.
      */
-    public Order(int orderumber, Date date, Set<OrderItem> orderItems, OrderStatus orderStatus) throws IllegalArgumentException {
+    public Order(int orderumber, Date date, Set<OrderItem> orderItems, OrderStatus orderStatus, DiscountStatus discountStatus, BigDecimal amount) throws IllegalArgumentException {
         this();
         this.orderNumber = orderumber;
         this.date = date;
         this.orderItems = orderItems;
         this.orderStatus = orderStatus;
+        this.discountStatus = discountStatus;
+        this.amount = amount;
     }
 
     /**
