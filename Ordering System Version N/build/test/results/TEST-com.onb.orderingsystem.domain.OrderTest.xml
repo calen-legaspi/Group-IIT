@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="2" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.OrderTest" tests="2" time="0.063" timestamp="2011-06-09T01:33:33">
+<testsuite errors="2" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.OrderTest" tests="2" time="0.067" timestamp="2011-06-09T02:09:09">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="PH" />
@@ -480,14 +480,20 @@
     <property name="platform.active" value="default_platform" />
     <property name="war.ear.name" value="Ordering_System_Version_N.war" />
   </properties>
-  <testcase classname="com.onb.orderingsystem.domain.OrderTest" name="testGetOrderAmount" time="0.0070">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at com.onb.orderingsystem.domain.OrderTest.testGetOrderAmount(OrderTest.java:32)
+  <testcase classname="com.onb.orderingsystem.domain.OrderTest" name="testGetOrderAmount" time="0.0090">
+    <error message="Not yet implemented." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Not yet implemented.
+	at com.onb.orderingsystem.domain.OrderItem.getAmount(OrderItem.java:59)
+	at com.onb.orderingsystem.domain.Order.updateAmount(Order.java:122)
+	at com.onb.orderingsystem.domain.Order.addOrderItem(Order.java:115)
+	at com.onb.orderingsystem.domain.OrderTest.setUp(OrderTest.java:24)
 </error>
   </testcase>
   <testcase classname="com.onb.orderingsystem.domain.OrderTest" name="testGetOrderAmountWithDiscount" time="0.0010">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at com.onb.orderingsystem.domain.OrderTest.testGetOrderAmountWithDiscount(OrderTest.java:43)
+    <error message="Not yet implemented." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Not yet implemented.
+	at com.onb.orderingsystem.domain.OrderItem.getAmount(OrderItem.java:59)
+	at com.onb.orderingsystem.domain.Order.updateAmount(Order.java:122)
+	at com.onb.orderingsystem.domain.Order.addOrderItem(Order.java:115)
+	at com.onb.orderingsystem.domain.OrderTest.setUp(OrderTest.java:24)
 </error>
   </testcase>
   <system-out><![CDATA[]]></system-out>

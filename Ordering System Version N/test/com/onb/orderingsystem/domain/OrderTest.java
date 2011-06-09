@@ -15,13 +15,21 @@ public class OrderTest {
     
     @Before
     public void setUp() {
+        Product p = new Product(1, "Product 1", new BigDecimal("10000.00")); 
+        
         /*
          * Setup a normal order amounting to 10,000
          */
+        normalOrder = new Order();
+        normalOrder.addOrderItem(new OrderItem(1, p, 1));
+        
         
         /*
          * Setup a discounted (10%) order from 10,000 (expecting 9,000)
          */
+        discountedOrder = new Order();
+        discountedOrder.addOrderItem(new OrderItem(2, p, 1));
+        discountedOrder.setDiscountStatus(DiscountStatus.TEN_PERCENT);
     }
 
     /**
@@ -32,6 +40,7 @@ public class OrderTest {
         BigDecimal actualAmount = normalOrder.getAmount();
         BigDecimal expectedAmount = new BigDecimal("10000.00");
         
+        assertEquals(2, actualAmount.scale());
         assertEquals(expectedAmount, actualAmount);
     }
 
@@ -43,6 +52,7 @@ public class OrderTest {
         BigDecimal actualAmount = discountedOrder.getAmount();
         BigDecimal expectedAmount = new BigDecimal("9000.00");
         
+        assertEquals(2, actualAmount.scale());
         assertEquals(expectedAmount, actualAmount);
     }
 }

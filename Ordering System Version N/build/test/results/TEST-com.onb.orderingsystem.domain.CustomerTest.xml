@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="3" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.CustomerTest" tests="3" time="0.113" timestamp="2011-06-09T01:33:30">
+<testsuite errors="2" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.CustomerTest" tests="3" time="0.064" timestamp="2011-06-09T02:09:06">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="PH" />
@@ -479,27 +479,19 @@
     <property name="platform.active" value="default_platform" />
     <property name="war.ear.name" value="Ordering_System_Version_N.war" />
   </properties>
-  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetAmountOfUnpaidOrders" time="0.0080">
-    <error message="One of the parameter is null or contains an illegal value." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: One of the parameter is null or contains an illegal value.
-	at com.onb.orderingsystem.domain.Product.&lt;init&gt;(Product.java:23)
-	at com.onb.orderingsystem.domain.Product.&lt;init&gt;(Product.java:36)
-	at com.onb.orderingsystem.domain.CustomerTest.setUp(CustomerTest.java:22)
+  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetAmountOfUnpaidOrders" time="0.0090">
+    <error message="Operation Not Yet Implemented." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Operation Not Yet Implemented.
+	at com.onb.orderingsystem.domain.Customer.getAmountOfUnpaidOrders(Customer.java:160)
+	at com.onb.orderingsystem.domain.CustomerTest.testGetAmountOfUnpaidOrders(CustomerTest.java:86)
 </error>
   </testcase>
-  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetAmountOfPaidOrders" time="0.0020">
-    <error message="One of the parameter is null or contains an illegal value." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: One of the parameter is null or contains an illegal value.
-	at com.onb.orderingsystem.domain.Product.&lt;init&gt;(Product.java:23)
-	at com.onb.orderingsystem.domain.Product.&lt;init&gt;(Product.java:36)
-	at com.onb.orderingsystem.domain.CustomerTest.setUp(CustomerTest.java:22)
+  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetAmountOfPaidOrders" time="0.0010">
+    <error message="Operation Not Yet Implemented." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Operation Not Yet Implemented.
+	at com.onb.orderingsystem.domain.Customer.getAmountOfPaidOrders(Customer.java:167)
+	at com.onb.orderingsystem.domain.CustomerTest.testGetAmountOfPaidOrders(CustomerTest.java:103)
 </error>
   </testcase>
-  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetCreditLimit" time="0.0020">
-    <error message="One of the parameter is null or contains an illegal value." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: One of the parameter is null or contains an illegal value.
-	at com.onb.orderingsystem.domain.Product.&lt;init&gt;(Product.java:23)
-	at com.onb.orderingsystem.domain.Product.&lt;init&gt;(Product.java:36)
-	at com.onb.orderingsystem.domain.CustomerTest.setUp(CustomerTest.java:22)
-</error>
-  </testcase>
+  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetCreditLimit" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

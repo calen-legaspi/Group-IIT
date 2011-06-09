@@ -31,7 +31,9 @@ public class Order {
     public Order() {
         this.date = new Date();
         this.orderItems = new LinkedHashSet<OrderItem>();
-        this.orderStatus = OrderStatus.ON_CREDIT;
+        this.orderStatus = OrderStatus.PROCESSING;
+        this.discountStatus = DiscountStatus.NO_DISCOUNT;
+        this.amount = new BigDecimal("0.00");
     }
 
     /**
@@ -40,6 +42,8 @@ public class Order {
      * @param date The date when the order was recorded.
      * @param orderItems The set of OrderItems to add to the order.
      * @param orderStatus The status of the order.
+     * @param discountStatus the discount status of the order.
+     * @param amount the computed amount after a discount has been applied. A field is necessary to avoid the price fluctuation discrepancy. 
      * @throws IllegalArgumentException Throws this exception when one of the argument has an illegal value.
      */
     public Order(int orderumber, Date date, Set<OrderItem> orderItems, OrderStatus orderStatus, DiscountStatus discountStatus, BigDecimal amount) throws IllegalArgumentException {

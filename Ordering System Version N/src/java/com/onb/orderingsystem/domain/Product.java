@@ -19,7 +19,7 @@ public class Product {
      * @throws IllegalArgumentException 
      */
     public Product(String name, BigDecimal amount) throws IllegalArgumentException {
-        if (name == null || name.equals("") || amount == null || amount.compareTo(BigDecimal.ZERO) >= 0) {
+        if (name == null || name.equals("") || amount == null || amount.compareTo(BigDecimal.ZERO) == 0) {
             throw new IllegalArgumentException("One of the parameter is null or contains an illegal value.");
         }
         this.name = name;

@@ -18,6 +18,8 @@ public class OrderItemTest {
     
     @Before
     public void setUp() {
+        Product p1 = new Product(1, "Product1", new BigDecimal("10000.00"));
+        orderItem = new OrderItem(1, p1, 1);
     }
 
     @Test

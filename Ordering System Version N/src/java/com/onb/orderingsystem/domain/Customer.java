@@ -1,6 +1,7 @@
 package com.onb.orderingsystem.domain;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -107,7 +108,12 @@ public class Customer {
      * @return True if the Customer has Orders which have not yet been paid.
      */
     public boolean hasUnpaidOrders() {
-        throw new UnsupportedOperationException("Operation Not Yet Implemented.");
+        for(Order o: orders) {
+            if(o.getOrderStatus() == OrderStatus.ON_CREDIT) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
@@ -124,7 +130,27 @@ public class Customer {
      * @return The credit limit of the Customer in BigDecimal rounded to two decimal point.
      */
     public BigDecimal getCreditLimit() {
-        throw new UnsupportedOperationException("Operation Not Yet Implemented.");
+        BigDecimal paidAmount = BigDecimal.ZERO;
+        for(Order o: orders) {
+            if(o.getOrderStatus() == OrderStatus.PAID) {
+                paidAmount = paidAmount.add(o.getAmount());
+            }
+        }
+        
+        BigDecimal K100 = new BigDecimal("100000.00");
+        BigDecimal K500 = new BigDecimal("500000.00");
+        BigDecimal M1 = new BigDecimal("1000000.00");
+        
+        if(paidAmount.compareTo(K100) <= 0) {
+            return new BigDecimal("10000.00");
+        } 
+        if(paidAmount.compareTo(K500) <= 0) {
+            return new BigDecimal("30000.00");
+        }
+        if(paidAmount.compareTo(M1) <= 0) {
+            return new BigDecimal("75000.00");
+        }
+        return new BigDecimal("150000.00");
     }
 
     /**

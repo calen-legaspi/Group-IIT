@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.InventoryItemTest" tests="1" time="0.056" timestamp="2011-06-09T01:33:31">
+<testsuite errors="0" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.InventoryItemTest" tests="1" time="0.064" timestamp="2011-06-09T02:09:06">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="PH" />
@@ -480,13 +480,7 @@
     <property name="platform.active" value="default_platform" />
     <property name="war.ear.name" value="Ordering_System_Version_N.war" />
   </properties>
-  <testcase classname="com.onb.orderingsystem.domain.InventoryItemTest" name="testSetQuantity" time="0.0080">
-    <error message="One of the parameter is null or contains an illegal value." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: One of the parameter is null or contains an illegal value.
-	at com.onb.orderingsystem.domain.Product.&lt;init&gt;(Product.java:23)
-	at com.onb.orderingsystem.domain.Product.&lt;init&gt;(Product.java:36)
-	at com.onb.orderingsystem.domain.InventoryItemTest.testSetQuantity(InventoryItemTest.java:11)
-</error>
-  </testcase>
+  <testcase classname="com.onb.orderingsystem.domain.InventoryItemTest" name="testSetQuantity" time="0.0060" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -120,10 +120,10 @@ public class CustomerTest {
         Customer c75000 = new Customer(1, "Customer 1", creditLimit75000);
         Customer c150000 = new Customer(1, "Customer 1", creditLimit150000);
         
-        assertEquals(new BigDecimal("10000.00"), c10000);
-        assertEquals(new BigDecimal("30000.00"), c30000);
-        assertEquals(new BigDecimal("75000.00"), c75000);
-        assertEquals(new BigDecimal("150000.00"), c150000);
+        assertEquals(new BigDecimal("10000.00"), c10000.getCreditLimit());
+        assertEquals(new BigDecimal("30000.00"), c30000.getCreditLimit());
+        assertEquals(new BigDecimal("75000.00"), c75000.getCreditLimit());
+        assertEquals(new BigDecimal("150000.00"), c150000.getCreditLimit());
     }
     
 }
