@@ -83,4 +83,32 @@ public class Product {
     public BigDecimal getAmount() {
         return amount;
     }
+    
+    /**
+     * 
+     * @param o
+     * @return 
+     */
+    @Override
+    public boolean equals(Object o) {
+        if(!(o instanceof Product)) {
+            throw new IllegalArgumentException("The parameter is not a product");
+        }
+        Product p = (Product)o;
+        if(p.getSkuNumber() == getSkuNumber()) {
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    @Override
+    public int hashCode() {
+        int hashCode = 8;
+        hashCode += getSkuNumber();
+        return hashCode;
+    }
 }

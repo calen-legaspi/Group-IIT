@@ -4,7 +4,7 @@ package com.onb.orderingsystem.domain;
  * The OrderStatus enum represents the state of a certain Order:
  * <ol>
  * <li><b>PROCESSING:</b>Default.</li>
- * <li><b>ON_CREDIT:</b>Finalized to a certain customer.</li>
+ * <li><b>UNPAID:</b>Order was not yet paid.</li>
  * <li><b>PAID:</b>Amount paid out.</li>
  * </ol>
  * <br/>By default, Orders should be on the <b>PROCESSING</b> state.
@@ -25,7 +25,7 @@ public enum OrderStatus {
      * When upgraded to this state, orderItems can no longer be modified.
      * During the upgrade, respective InventoryItems should be updated to reflect the quantity deductions.
      */
-    ON_CREDIT,
+    UNPAID,
     
     /**
      * When the Customer pays up the amount owed to a specific Order.<br/>

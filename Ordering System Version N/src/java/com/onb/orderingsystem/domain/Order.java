@@ -69,12 +69,20 @@ public class Order {
     }
 
     /**
-     * 
-     * @param status
+     * Updates the orderStatus of the order.
+     * Allowed transition is PROCESSING -> UNPAID -> PAID
+     * @param orderStatus
      * @throws IllegalStateException Throws this exception when the transition from one state to the next is prohibited.
      */
-    public void setOrderStatus(OrderStatus status) throws IllegalStateException {
-        throw new UnsupportedOperationException("Operation not yet implemented!");
+    public void setOrderStatus(OrderStatus orderStatus) throws IllegalStateException {
+        if(this.orderStatus == OrderStatus.PROCESSING && orderStatus == OrderStatus.UNPAID) {
+            this.orderStatus = orderStatus;
+        } else if(this.orderStatus == OrderStatus.UNPAID && orderStatus == OrderStatus.PAID) {
+            this.orderStatus = orderStatus; //duplicate code alert. 
+            //TODO: refactor
+        } else {
+            throw new IllegalStateException("Illegal state transition: From "+this.orderStatus+" to "+orderStatus);
+        }
     }
     
     /**
@@ -115,8 +123,11 @@ public class Order {
         updateAmount();
     }
     
-    //updates the total amount field during changes
-    private void updateAmount() {
+    //updates the total amount field during changes (works only in the PROCESSING state
+    private void updateAmount() throws IllegalStateException {
+        if(this.orderStatus != OrderStatus.PROCESSING) {
+            return;
+        }
         BigDecimal rawAmount = BigDecimal.ZERO;
         for(OrderItem o: orderItems) {
             rawAmount = rawAmount.add(o.getAmount());
@@ -136,7 +147,14 @@ public class Order {
      * @throws IllegalStateException Throws this exception when the orderStatus is not "PROCESSING".
      */
     public void removeOrder(OrderItem orderItem) throws IllegalArgumentException, IllegalStateException {
-        throw new UnsupportedOperationException("Operation not yet implemented!");
+        if(orderItem == null) {
+            throw new IllegalArgumentException("Parameter orderItem is null.");
+        }
+        if(orderStatus != OrderStatus.PROCESSING) {
+            throw new IllegalStateException("Edit lock: You cannot modify the contents of the Order items.");
+        }
+        this.orderItems.remove(orderItem);
+        updateAmount();
     }
 
     /**
@@ -181,6 +199,7 @@ public class Order {
      * @return the amount due.
      */
     public BigDecimal getAmount() {
-        return amount;
+        updateAmount();
+        return amount.setScale(2);
     }
 }

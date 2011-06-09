@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.OrderItemTest" tests="1" time="0.069" timestamp="2011-06-09T02:09:08">
+<testsuite errors="0" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.OrderItemTest" tests="1" time="0.06" timestamp="2011-06-09T03:08:09">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="PH" />
@@ -284,12 +284,11 @@
     <property name="java.vm.name" value="Java HotSpot(TM) Server VM" />
     <property name="do.display.browser.debug" value="true" />
     <property name="netbeans.user" value="/home/lyndon/.netbeans/7.0" />
-    <property name="tests.failed" value="true" />
     <property name="javadoc.additionalparam" value="" />
     <property name="libs.ricoh-ant-utils.classpath" value="/home/lyndon/netbeans-7.0/mobility/modules/ext/org-netbeans-modules-j2me-cdc-project-ricoh.jar:/home/lyndon/netbeans-7.0/mobility/modules/ext/RicohAntTasks-2.0.jar:/home/lyndon/netbeans-7.0/mobility/modules/ext/commons-httpclient-3.0.jar:/home/lyndon/netbeans-7.0/ide/modules/ext/commons-logging-1.1.jar:/home/lyndon/netbeans-7.0/mobility/modules/ext/commons-codec-1.3.jar" />
-    <property name="java.vendor.url" value="http://java.sun.com/" />
     <property name="ant.file.Ordering_System_Version_N-impl" value="/home/lyndon/Downloads/Git Repository/Group-IIT/Ordering System Version N/nbproject/build-impl.xml" />
     <property name="java.io.tmpdir" value="/tmp" />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
     <property name="endorsed.classpath.cmd.line.arg" value="-Xbootclasspath/p:&apos;/home/lyndon/netbeans-7.0/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar&apos;" />
     <property name="compile.jsps" value="false" />
     <property name="libs.jsp-compiler.src" value="" />
@@ -311,8 +310,8 @@
     <property name="sun.cpu.isalist" value="" />
     <property name="libs.j2me_ant_ext.maven-pom" value="" />
     <property name="libs.CopyLibs.javadoc" value="" />
-    <property name="libs.ActiveSync.javadoc" value="" />
     <property name="org.openide.specification.version" value="6.2" />
+    <property name="libs.ActiveSync.javadoc" value="" />
     <property name="j2ee.server.home" value="/home/lyndon/apache-tomcat-7.0.14" />
     <property name="libs.hibernate-support.classpath" value="/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/antlr-2.7.6.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/asm.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/asm-attrs.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/cglib-2.1.3.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/commons-collections-2.1.1.jar:/home/lyndon/netbeans-7.0/ide/modules/ext/commons-logging-1.1.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/dom4j-1.6.1.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/ehcache-1.2.3.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/jdbc2_0-stdext.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/jta.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/hibernate3.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/hibernate-tools.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/hibernate-annotations.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/hibernate-commons-annotations.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/hibernate-entitymanager.jar:/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/javassist.jar" />
     <property name="libs.DataBindingME-PIM.classpath" value="/home/lyndon/netbeans-7.0/mobility/modules/ext/netbeans_databindingme_pim.jar" />
@@ -330,17 +329,17 @@
     <property name="java.specification.name" value="Java Platform API Specification" />
     <property name="libs.swing-app-framework.maven-pom" value="" />
     <property name="nu.validator.spec.microsyntax-descriptions" value="jar:file:/home/lyndon/netbeans-7.0/ide/modules/ext/validator.jar!/nu/validator/localentities/files/wiki_whatwg_org_wiki_MicrosyntaxDescriptions" />
-    <property name="libs.NetBeans MIDP Components WMA.classpath" value="/home/lyndon/netbeans-7.0/mobility/modules/ext/netbeans_midp_components_wma.jar" />
     <property name="libs.jakarta_slide_ant_webdav.maven-pom" value="" />
+    <property name="libs.NetBeans MIDP Components WMA.classpath" value="/home/lyndon/netbeans-7.0/mobility/modules/ext/netbeans_midp_components_wma.jar" />
     <property name="no.dist.ear.dir" value="true" />
     <property name="libs.sjmc-ant-utils.src" value="" />
     <property name="java.specification.vendor" value="Sun Microsystems Inc." />
     <property name="libs.cdc-agui-swing-layout.javadoc" value="" />
     <property name="libs.javac-api.classpath" value="/home/lyndon/netbeans-7.0/java/modules/ext/javac-api-nb-7.0-b07.jar" />
-    <property name="java.version" value="1.6.0_24" />
     <property name="libs.nokiaS80-ant-utils.classpath" value="/home/lyndon/netbeans-7.0/mobility/modules/ext/org-netbeans-modules-j2me-cdc-project-nokiaS80.jar" />
-    <property name="libs.NetBeans MIDP Components WMA.javadoc" value="/home/lyndon/netbeans-7.0/mobility/modules/docs/netbeans_midp_components_wma-api.zip" />
+    <property name="java.version" value="1.6.0_24" />
     <property name="javadoc.version" value="false" />
+    <property name="libs.NetBeans MIDP Components WMA.javadoc" value="/home/lyndon/netbeans-7.0/mobility/modules/docs/netbeans_midp_components_wma-api.zip" />
     <property name="libs.MySQLDriver.javadoc" value="" />
     <property name="org.openide.version" value="deprecated" />
     <property name="libs.restlib_gfv3ee6.maven-pom" value="" />
@@ -363,10 +362,10 @@
     <property name="libs.swing-layout.classpath" value="/home/lyndon/netbeans-7.0/platform/modules/ext/swing-layout-1.0.4.jar" />
     <property name="jspc.dtds" value="/resources/dtds/" />
     <property name="libs.restlib.src" value="" />
-    <property name="build.generated.dir" value="build/generated" />
     <property name="javac.source" value="1.6" />
-    <property name="line.separator" value="&#xa;" />
+    <property name="build.generated.dir" value="build/generated" />
     <property name="libs.hibernate-persistence.src" value="" />
+    <property name="line.separator" value="&#xa;" />
     <property name="libs.nb_svg_midp_components.javadoc" value="/home/lyndon/netbeans-7.0/mobility/modules/docs/nb_svg_midp_components-api.zip" />
     <property name="java.specification.version" value="1.6" />
     <property name="java.vm.info" value="mixed mode" />
@@ -380,8 +379,8 @@
     <property name="src.dir" value="src/java" />
     <property name="annotation.processing.enabled" value="true" />
     <property name="libs.jsf20.src" value="" />
-    <property name="libs.DataBindingME-SVG.maven-pom" value="" />
     <property name="libs.jsf12.src" value="" />
+    <property name="libs.DataBindingME-SVG.maven-pom" value="" />
     <property name="libs.nokiadeployment.src" value="" />
     <property name="j2ee.platform" value="1.6-web" />
     <property name="libs.savaje-ant-utils.javadoc" value="" />
@@ -390,8 +389,8 @@
     <property name="platforms.Sun_Java_TM__Wireless_Toolkit_2_5_2_for_CLDC.debugcommandline" value="" />
     <property name="libs.cdc-ant-utils.maven-pom" value="" />
     <property name="libs.Comet-GlassFish-v3.classpath" value="/home/lyndon/glassfish-3.1/glassfish/modules/grizzly-comet.jar" />
-    <property name="web.docbase.dir" value="web" />
     <property name="libs.restlib_gfv3ee6.javadoc" value="/home/lyndon/netbeans-7.0/enterprise/docs/jsr311-api-1.1.1-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/jersey-client-1.3-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/jersey-json-1.3-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/jersey-multipart-1.3-javadoc.zip" />
+    <property name="web.docbase.dir" value="web" />
     <property name="libs.primefaces.src" value="" />
     <property name="libs.cdc-agui-swing-layout.classpath" value="/home/lyndon/netbeans-7.0/mobility/modules/ext/cdc-agui-swing-layout.jar" />
     <property name="dist.dir" value="dist" />
@@ -415,19 +414,19 @@
     <property name="libs.sjmc-ant-utils.javadoc" value="" />
     <property name="do.tmp.war.package.with.custom.manifest" value="true" />
     <property name="default.javac.target" value="1.6" />
-    <property name="libs.junit_4.classpath" value="/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar" />
     <property name="libs.Java-EE-GlassFish-v3.src" value="" />
+    <property name="libs.junit_4.classpath" value="/home/lyndon/netbeans-7.0/platform/modules/ext/junit-4.8.2.jar" />
     <property name="user.timezone" value="" />
-    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="libs.ant-contrib.src" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="netbeans.dirs" value="/home/lyndon/netbeans-7.0/nb:/home/lyndon/netbeans-7.0/ergonomics:/home/lyndon/netbeans-7.0/ide:/home/lyndon/netbeans-7.0/java:/home/lyndon/netbeans-7.0/bin/../xml:/home/lyndon/netbeans-7.0/apisupport:/home/lyndon/netbeans-7.0/bin/../webcommon:/home/lyndon/netbeans-7.0/websvccommon:/home/lyndon/netbeans-7.0/enterprise:/home/lyndon/netbeans-7.0/mobility:/home/lyndon/netbeans-7.0/profiler:/home/lyndon/netbeans-7.0/ruby:/home/lyndon/netbeans-7.0/bin/../python:/home/lyndon/netbeans-7.0/php:/home/lyndon/netbeans-7.0/bin/../visualweb:/home/lyndon/netbeans-7.0/bin/../soa:/home/lyndon/netbeans-7.0/bin/../identity:/home/lyndon/netbeans-7.0/bin/../uml:/home/lyndon/netbeans-7.0/harness:/home/lyndon/netbeans-7.0/cnd:/home/lyndon/netbeans-7.0/dlight:/home/lyndon/netbeans-7.0/groovy:/home/lyndon/netbeans-7.0/bin/../extra:/home/lyndon/netbeans-7.0/bin/../javafx:/home/lyndon/netbeans-7.0/bin/../javacard:" />
     <property name="libs.jsf20.javadoc" value="/home/lyndon/netbeans-7.0/enterprise/docs/javaee6-doc-api.zip" />
     <property name="libs.restlib_gfv3ee6.src" value="" />
     <property name="java.ext.dirs" value="/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/ext:/usr/java/packages/lib/ext" />
     <property name="libs.metro.src" value="" />
     <property name="libs.savaje-ant-utils.maven-pom" value="" />
-    <property name="libs.semc-ant-utils.src" value="" />
     <property name="endorsed.classpath" value="/home/lyndon/netbeans-7.0/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
+    <property name="libs.semc-ant-utils.src" value="" />
     <property name="libs.absolutelayout.classpath" value="/home/lyndon/netbeans-7.0/java/modules/ext/AbsoluteLayout.jar" />
     <property name="excludes" value="" />
     <property name="libs.metro.classpath" value="/home/lyndon/netbeans-7.0/ide/modules/ext/jaxb/activation.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/metro/webservices-api.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/metro/webservices-extra-api.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/metro/webservices-extra.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/metro/webservices-rt.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/metro/webservices-tools.jar" />
@@ -445,10 +444,10 @@
     <property name="libs.toplink.javadoc" value="" />
     <property name="sun.desktop" value="gnome" />
     <property name="libs.nb_svg_midp_components.maven-pom" value="" />
-    <property name="libs.ricoh-ant-utils.javadoc" value="" />
     <property name="libs.Comet-GlassFish-v3.src" value="" />
-    <property name="libs.NetBeans MIDP Components PDA.maven-pom" value="" />
+    <property name="libs.ricoh-ant-utils.javadoc" value="" />
     <property name="libs.restlib.javadoc" value="/home/lyndon/netbeans-7.0/enterprise/docs/jersey-client-1.3-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/jersey-core-1.1.5.1-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/jersey-json-1.3-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/jersey-multipart-1.3-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/jersey-spring-1.3-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/oauth-client-1.3-javadoc.zip:/home/lyndon/netbeans-7.0/enterprise/docs/oauth-signature-1.3-javadoc.zip" />
+    <property name="libs.NetBeans MIDP Components PDA.maven-pom" value="" />
     <property name="war.content.additional" value="" />
     <property name="j2ee.platform.embeddableejb.classpath" value="" />
     <property name="forceRedeploy" value="false" />
@@ -460,8 +459,8 @@
     <property name="libs.CopyLibs.classpath" value="/home/lyndon/netbeans-7.0/java/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
     <property name="libs.spring-framework300.classpath" value="/home/lyndon/netbeans-7.0/ide/modules/ext/commons-logging-1.1.jar:/home/lyndon/netbeans-7.0/java/modules/ext/cglib-2.2.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-aop-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-asm-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-aspects-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-beans-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-context-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-context-support-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-core-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-expression-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-instrument-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-jdbc-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-jms-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-orm-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-oxm-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-test-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-tx-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-web-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-webmvc-3.0.2.RELEASE.jar:/home/lyndon/netbeans-7.0/java/modules/ext/spring-3.0/spring-struts-3.0.2.RELEASE.jar" />
     <property name="libs.jsp-compiler.maven-pom" value="" />
-    <property name="libs.spring-webmvc.maven-pom" value="" />
     <property name="libs.Java-EE-GlassFish-v3.wsinterop" value="" />
+    <property name="libs.spring-webmvc.maven-pom" value="" />
     <property name="libs.ejb3-persistence.classpath" value="/home/lyndon/netbeans-7.0/java/modules/ext/hibernate/ejb3-persistence.jar" />
     <property name="libs.spring-framework.javadoc" value="" />
     <property name="libs.DataBindingME-PIM.src" value="/home/lyndon/netbeans-7.0/mobility/sources/netbeans_databindingme_pim-src.zip" />
@@ -473,19 +472,14 @@
     <property name="libs.CopyLibs.src" value="" />
     <property name="libs.jsp-compilation.classpath" value="/home/lyndon/netbeans-7.0/java/ant/lib/ant.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/servlet3.0-jsp2.2-api.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/glassfish-jspparser-3.0.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/jsf-2_0/jsf-api.jar:/home/lyndon/netbeans-7.0/enterprise/modules/ext/jstl.jar:/home/lyndon/netbeans-7.0/java/ant/lib/ant-launcher.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.8.2 compiled on December 20 2010" />
-    <property name="build.classes.excludes" value="**/*.java,**/*.form" />
     <property name="file.encoding" value="UTF-8" />
+    <property name="build.classes.excludes" value="**/*.java,**/*.form" />
     <property name="jdkBug6558476" value="false" />
     <property name="javadoc.nonavbar" value="false" />
     <property name="platform.active" value="default_platform" />
     <property name="war.ear.name" value="Ordering_System_Version_N.war" />
   </properties>
-  <testcase classname="com.onb.orderingsystem.domain.OrderItemTest" name="testGetAmount" time="0.011">
-    <error message="Not yet implemented." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Not yet implemented.
-	at com.onb.orderingsystem.domain.OrderItem.getAmount(OrderItem.java:59)
-	at com.onb.orderingsystem.domain.OrderItemTest.testGetAmount(OrderItemTest.java:27)
-</error>
-  </testcase>
+  <testcase classname="com.onb.orderingsystem.domain.OrderItemTest" name="testGetAmount" time="0.0040" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

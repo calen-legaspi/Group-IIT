@@ -109,7 +109,7 @@ public class Customer {
      */
     public boolean hasUnpaidOrders() {
         for(Order o: orders) {
-            if(o.getOrderStatus() == OrderStatus.ON_CREDIT) {
+            if(o.getOrderStatus() == OrderStatus.UNPAID) {
                 return true;
             }
         }
@@ -157,13 +157,25 @@ public class Customer {
      * @return The sum of the amount of all the unpaid orders of this customer rounded off to two decimal places. 
      */
     public BigDecimal getAmountOfUnpaidOrders() {
-        throw new UnsupportedOperationException("Operation Not Yet Implemented.");
+        BigDecimal unpaidOrderAmount = BigDecimal.ZERO;
+        for(Order o: orders) {
+            if(o.getOrderStatus() == OrderStatus.UNPAID) {
+                unpaidOrderAmount = unpaidOrderAmount.add(o.getAmount());
+            }
+        }
+        return unpaidOrderAmount;
     }
 
     /**
      * @return The sum of the amount of all paid orders of this customer rounded off to two decimal places.
      */
     public BigDecimal getAmountOfPaidOrders() {
-        throw new UnsupportedOperationException("Operation Not Yet Implemented.");
+        BigDecimal paidOrderAmount = BigDecimal.ZERO;
+        for(Order o: orders) {
+            if(o.getOrderStatus() == OrderStatus.PAID) {
+                paidOrderAmount = paidOrderAmount.add(o.getAmount());
+            }
+        }
+        return paidOrderAmount;
     }
 }

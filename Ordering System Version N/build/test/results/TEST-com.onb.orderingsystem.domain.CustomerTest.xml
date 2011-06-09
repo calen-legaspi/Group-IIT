@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="2" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.CustomerTest" tests="3" time="0.064" timestamp="2011-06-09T02:09:06">
+<testsuite errors="0" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.CustomerTest" tests="3" time="0.066" timestamp="2011-06-09T03:08:07">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="PH" />
@@ -479,18 +479,8 @@
     <property name="platform.active" value="default_platform" />
     <property name="war.ear.name" value="Ordering_System_Version_N.war" />
   </properties>
-  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetAmountOfUnpaidOrders" time="0.0090">
-    <error message="Operation Not Yet Implemented." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Operation Not Yet Implemented.
-	at com.onb.orderingsystem.domain.Customer.getAmountOfUnpaidOrders(Customer.java:160)
-	at com.onb.orderingsystem.domain.CustomerTest.testGetAmountOfUnpaidOrders(CustomerTest.java:86)
-</error>
-  </testcase>
-  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetAmountOfPaidOrders" time="0.0010">
-    <error message="Operation Not Yet Implemented." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Operation Not Yet Implemented.
-	at com.onb.orderingsystem.domain.Customer.getAmountOfPaidOrders(Customer.java:167)
-	at com.onb.orderingsystem.domain.CustomerTest.testGetAmountOfPaidOrders(CustomerTest.java:103)
-</error>
-  </testcase>
+  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetAmountOfUnpaidOrders" time="0.0060" />
+  <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetAmountOfPaidOrders" time="0.0010" />
   <testcase classname="com.onb.orderingsystem.domain.CustomerTest" name="testGetCreditLimit" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

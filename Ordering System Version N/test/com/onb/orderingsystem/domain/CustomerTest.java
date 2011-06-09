@@ -27,7 +27,7 @@ public class CustomerTest {
         OrderItem orderItem10000 = new OrderItem(p1, 1);
         Set<OrderItem> orderItems10000 = new LinkedHashSet<OrderItem>();
         orderItems10000.add(orderItem10000);
-        Order order10000 = new Order(1, new Date(), orderItems10000, OrderStatus.ON_CREDIT, DiscountStatus.NO_DISCOUNT, new BigDecimal("10000.00"));
+        Order order10000 = new Order(1, new Date(), orderItems10000, OrderStatus.UNPAID, DiscountStatus.NO_DISCOUNT, new BigDecimal("10000.00"));
         ordersUnpaid10000 = new LinkedHashSet<Order>();
         ordersUnpaid10000.add(order10000);
         
@@ -86,7 +86,7 @@ public class CustomerTest {
         BigDecimal actual = c.getAmountOfUnpaidOrders();
         BigDecimal expected = new BigDecimal("10000.00");
         
-        int actual_scale = c.getAmountOfPaidOrders().scale();
+        int actual_scale = c.getAmountOfUnpaidOrders().scale();
         int expected_scale = 2;
         
         assertEquals(expected_scale, actual_scale);

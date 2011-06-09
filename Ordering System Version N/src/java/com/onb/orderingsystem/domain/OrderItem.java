@@ -1,6 +1,7 @@
 package com.onb.orderingsystem.domain;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 /**
  * OrderItems represent the items included in the Order.
@@ -56,7 +57,7 @@ public class OrderItem {
      * @return
      */
     public BigDecimal getAmount() {
-        throw new UnsupportedOperationException("Not yet implemented.");
+        return product.getAmount().multiply(new BigDecimal(getQuantity()));
     }
     
     /**

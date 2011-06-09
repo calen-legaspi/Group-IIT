@@ -73,4 +73,30 @@ public class InventoryItem {
         }
         this.quantity = quantity;
     }
+    
+    /**
+     * 
+     * @param o
+     * @return 
+     */
+    @Override
+    public boolean equals(Object o) {
+        if(!(o instanceof InventoryItem)) {
+            throw new IllegalArgumentException("Parameter is not an InventoryItem");
+        }
+        InventoryItem invItem = (InventoryItem)o;
+        if(invItem.getProduct().equals(this.getProduct())) {
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * 
+     * @return 
+     */
+    @Override
+    public int hashCode() {
+        return product.hashCode();
+    }
 }

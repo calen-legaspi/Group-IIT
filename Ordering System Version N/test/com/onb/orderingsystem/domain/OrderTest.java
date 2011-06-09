@@ -23,7 +23,6 @@ public class OrderTest {
         normalOrder = new Order();
         normalOrder.addOrderItem(new OrderItem(1, p, 1));
         
-        
         /*
          * Setup a discounted (10%) order from 10,000 (expecting 9,000)
          */

@@ -41,13 +41,24 @@ public class Inventory {
      * @exception IllegalArgumentException Throws this exception when the parameter is null.
      */
     public void addInventoryItem(InventoryItem inventoryItem) throws IllegalArgumentException {
-        throw new UnsupportedOperationException("Operation Not Yet Implemented.");
+        if(inventoryItem == null) {
+            throw new IllegalArgumentException("Parameter cant be null.");
+        }
+        if(inventoryItems.contains(inventoryItem)) {
+            for(InventoryItem i: inventoryItems) {
+                if(i.equals(inventoryItem)) {
+                    i.setQuantity(i.getQuantity()+inventoryItem.getQuantity());
+                }
+            }
+        } else {
+            inventoryItems.add(inventoryItem);
+        }
     }
 
     /**
      * @return The Set of InventoryItems stored by this inventory.
      */
     public Set<InventoryItem> getInventoryItems() {
-        throw new UnsupportedOperationException("Operation Not Yet Implemented.");
+        return this.inventoryItems;
     }
 }
