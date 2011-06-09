@@ -68,6 +68,7 @@ public class UserTest {
         pstmt = con.prepareStatement(
                 "INSERT INTO testing(name) VALUES(?)");
         pstmt.setString(1, "Waahhahahahahha");
+        
         pstmt.executeUpdate();
 
     }
