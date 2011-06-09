@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.CustomerTest" tests="3" time="0.056" timestamp="2011-06-09T03:25:06">
+<testsuite errors="0" failures="0" hostname="lyndon" name="com.onb.orderingsystem.domain.CustomerTest" tests="3" time="0.055" timestamp="2011-06-09T03:34:24">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="PH" />
