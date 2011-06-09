@@ -1,10 +1,15 @@
+package com.onb.orderingsystem.dao.impl;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.onb.orderingsystem.dao;
 
+
+import com.onb.orderingsystem.dao.CustomerDAO;
+import com.onb.orderingsystem.dao.DBConnectionFactory;
 import com.onb.orderingsystem.domain.Customer;
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Set;
@@ -13,12 +18,14 @@ import java.util.Set;
  *
  * @author juliusmercons
  */
-public class CustomerDAOimp extends DAOImpl implements CustomerDAO{
+public class CustomerDAOimp implements CustomerDAO{
 
+    DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
     public void create(Customer t) {
        try{
+           Connection conn = myFactory.getConnection();
             String sql;
-            connection = getConnection();
+            
             sql = "INSERT INTO customer (name) VALUES (?)";
             statement = connection.prepareStatement(sql);
             statement.setString(1, t.getName());
@@ -102,6 +109,21 @@ public class CustomerDAOimp extends DAOImpl implements CustomerDAO{
 
     @Override
     public Object findWhere(String whereStatement) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void create(Object t) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void update(Object t) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public void delete(Object t) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
     
