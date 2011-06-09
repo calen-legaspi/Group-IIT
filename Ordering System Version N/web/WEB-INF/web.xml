@@ -4,9 +4,25 @@
         <servlet-name>TestServlet</servlet-name>
         <servlet-class>com.onb.orderingsystem.controller.TestServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>reg</servlet-name>
+        <jsp-file>/WEB-INF/addCustomer.jsp</jsp-file>
+    </servlet>
+    <servlet>
+        <servlet-name>show.do</servlet-name>
+        <jsp-file>/WEB-INF/showcust.jsp</jsp-file>
+    </servlet>
     <servlet-mapping>
         <servlet-name>TestServlet</servlet-name>
         <url-pattern>/TestServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>reg</servlet-name>
+        <url-pattern>/customer/reg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>show.do</servlet-name>
+        <url-pattern>/customer/show.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
