@@ -35,4 +35,19 @@ public enum DiscountStatus {
     public BigDecimal applyDiscount(BigDecimal originalAmount) {
         return originalAmount.subtract(originalAmount.multiply(discountRate));
     }
+    
+    /**
+     * Retrieves the matching DiscountStatus from the parameter.
+     * @param stringForm
+     * @return
+     * @throws IllegalArgumentException 
+     */
+    public static DiscountStatus fromString(String stringForm) throws IllegalArgumentException {
+        for(DiscountStatus s: DiscountStatus.values()) {
+            if(s.toString().equals(stringForm)) {
+                return s;
+            }
+        }
+        throw new IllegalArgumentException("DiscountStatus \""+stringForm+"\" does not exist.");
+    }
 }

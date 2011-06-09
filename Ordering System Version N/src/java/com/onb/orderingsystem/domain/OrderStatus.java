@@ -30,5 +30,20 @@ public enum OrderStatus {
     /**
      * When the Customer pays up the amount owed to a specific Order.<br/>
      */
-    PAID
+    PAID;
+    
+    /**
+     * 
+     * @param stringForm
+     * @return
+     * @throws IllegalArgumentException 
+     */
+    public static OrderStatus fromString(String stringForm) throws IllegalArgumentException {
+        for(OrderStatus o: OrderStatus.values()) {
+            if(o.toString().equals(stringForm)) {
+                return o;
+            }
+        }
+        throw new IllegalArgumentException("OrderStatus \""+stringForm+"\" does not exist.");
+    }
 }
