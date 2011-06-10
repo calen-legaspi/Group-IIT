@@ -16,7 +16,7 @@ public abstract class DBConnectionFactory {
         driver= "com.mysql.jdbc.Driver";
         url = "jdbc:mysql://127.0.0.1/OrderingSystem";
         username = "root";
-        password = "";
+        password = "qwerty";
         return new DBConnectionFactoryImpl(driver,url,username,password);
     }
 
