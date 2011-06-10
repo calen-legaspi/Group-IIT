@@ -15,9 +15,9 @@ import java.util.Set;
 public class CustomerDAOImplementation extends AbstractDAO implements CustomerDAO {
     
     /**
-     * 
-     * @param connection
-     * @throws IllegalArgumentException 
+     * @see java.sql.Connection
+     * @param connection 
+     * @throws IllegalArgumentException if the connection is null.
      */
     public CustomerDAOImplementation(Connection connection) throws IllegalArgumentException {
         super(connection);

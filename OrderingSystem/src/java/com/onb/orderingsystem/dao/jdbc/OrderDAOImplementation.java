@@ -13,8 +13,9 @@ import java.sql.Connection;
 import java.util.List;
 
 /**
- *
- * @author lyndon
+ * Implementation of the OrderDAO interface.
+ * @see com.onb.orderingsystem.dao.OrderDAO
+ * @see com.onb.orderingsystem.dao.AbstractDAO
  */
 public class OrderDAOImplementation extends AbstractDAO implements OrderDAO {
     

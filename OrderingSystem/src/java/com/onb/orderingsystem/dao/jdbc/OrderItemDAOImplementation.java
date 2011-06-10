@@ -11,8 +11,9 @@ import com.onb.orderingsystem.domain.OrderItem;
 import java.sql.Connection;
 
 /**
- *
- * @author lyndon
+ * Implementation of the OrderItemDAO.
+ * @see com.onb.orderingsystem.dao.OrderItemDAO
+ * @see com.onb.orderingsystem.dao.AbstractDAO
  */
 public class OrderItemDAOImplementation extends AbstractDAO implements OrderItemDAO {
     

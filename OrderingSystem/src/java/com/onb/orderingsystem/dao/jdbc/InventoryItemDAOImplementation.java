@@ -12,8 +12,9 @@ import java.sql.Connection;
 import java.util.Set;
 
 /**
- *
- * @author lyndon
+ * Implementation of the InventoryItemDAO interface.
+ * @see com.onb.orderingsystem.dao.InventoryItemDAO
+ * @see com.onb.orderingsystem.dao.AbstractDAO
  */
 public class InventoryItemDAOImplementation extends AbstractDAO implements InventoryItemDAO {
 
