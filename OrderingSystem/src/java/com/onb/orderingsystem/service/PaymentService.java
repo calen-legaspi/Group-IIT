@@ -13,7 +13,7 @@ import java.util.Set;
  * @author The Architect
  */
 public interface PaymentService {
-    public Set<Customer> getCustomersWithCredit();
-    public Set<Order> getUnpaidOrders(Customer customer);
-    public void payFor(Order order);
+    public Set<Customer> getCustomersWithCredit() throws ServiceException;
+    public Set<Order> getUnpaidOrders(Customer customer) throws ServiceException, IllegalArgumentException;
+    public void payFor(Order order) throws ServiceException, IllegalArgumentException;
 }
