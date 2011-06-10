@@ -4,6 +4,7 @@
  */
 package com.onb.orderingsystem.service;
 import com.onb.orderingsystem.dao.*;
+import com.onb.orderingsystem.dao.impl.CustomerDAOimp;
 import com.onb.orderingsystem.domain.*;
 /**
  *
@@ -12,7 +13,7 @@ import com.onb.orderingsystem.domain.*;
 public class AddCustomer {
     public void addCustomerData(String name){
         Customer cust = new Customer(name);
-        CustomerDAOimp dao =new CustomerDAOimp();
+        CustomerDAO dao =new CustomerDAOimp();
         dao.create(cust);
     }
 }
