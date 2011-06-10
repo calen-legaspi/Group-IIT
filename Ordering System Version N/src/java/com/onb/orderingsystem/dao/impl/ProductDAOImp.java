@@ -2,32 +2,34 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.onb.orderingsystem.dao;
+package com.onb.orderingsystem.dao.impl;
 
+import com.onb.orderingsystem.dao.*;
 import com.onb.orderingsystem.domain.Product;
 import java.math.BigDecimal;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashSet;
 import java.util.Set;
 
 
-public class ProductDAOImp extends DAOImpl implements ProductDAO{
+public class ProductDAOImp{
+    
+    DBConnectionFactory myFactory = DBConnectionFactory.getInstance();
      
     public void create(Product t) {
        try{
-            String sql;
-            connection = getConnection();
-            sql = "INSERT INTO product (name, amount) VALUES (?, ?)";
-            statement = connection.prepareStatement(sql);
+            Connection conn = myFactory.getConnection();
+            String sql = "INSERT INTO product (name, amount) VALUES (?, ?)";
+            PreparedStatement statement = conn.prepareStatement(sql);
             statement.setString(1, t.getName());
             statement.setDouble(2, t.getAmount().doubleValue());
             statement.executeUpdate();
-			
+            conn.close();
 	}catch(SQLException e){
-            throw new RuntimeException("Failed to save comment");
-	}finally{
-            close(rs, statement, connection);
+            throw new RuntimeException("Failed to save product");
 	}
     }
 
