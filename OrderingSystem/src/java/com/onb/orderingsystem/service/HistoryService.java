@@ -12,5 +12,5 @@ import java.util.Set;
  * @author The Architect
  */
 public interface HistoryService {
-    public Set<Customer> getCustomers();
+    public Set<Customer> getCustomers() throws ServiceException;
 }
