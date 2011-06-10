@@ -40,7 +40,7 @@ public class CustomerDAOTest {
     }
 
     @Test
-    public void testGetAvailableCustomers() throws DAOException {
+    public void testGetCustomerCreditLimitNotExceeded() throws DAOException {
         Set<Customer> availableCustomers = customerDAO.getCustomersCreditLimitNotExceeded();
         
         int expected = 5;
@@ -60,7 +60,12 @@ public class CustomerDAOTest {
     }
     
     @Test
-    public void testGetCustomersWithUnpaidAmount() {
+    public void testGetCustomersWithUnpaidOrders() throws DAOException {
+        Set<Customer> customersWithUnpaidAmount = customerDAO.getCustomersWithUnpaidOrders();
         
+        int expected = 5;
+        int actual = customersWithUnpaidAmount.size();
+        
+        assertEquals(expected, actual);
     }
 }

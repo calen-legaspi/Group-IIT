@@ -10,8 +10,8 @@ import com.onb.orderingsystem.domain.Order;
 import java.util.Set;
 
 /**
- *
- * @author The Architect
+ * The OrderService services the "Create Order" use case scenario.
+ * 
  */
 public interface OrderService {
     public Set<Customer> getAvailableCustomers() throws ServiceException;
