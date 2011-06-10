@@ -18,7 +18,12 @@ import java.util.List;
  */
 public class OrderDAOImplementation extends AbstractDAO implements OrderDAO {
     
-    public OrderDAOImplementation(Connection connection) {
+    /**
+     * 
+     * @param connection
+     * @throws IllegalArgumentException 
+     */
+    public OrderDAOImplementation(Connection connection) throws IllegalArgumentException {
         super(connection);
     }
 

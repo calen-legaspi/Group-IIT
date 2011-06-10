@@ -4,12 +4,13 @@ import java.sql.Connection;
 
 /**
  * DAO classes are responsible for mapping relational database tables to java objects.
- * All DAO must extend this class.
+ * All DAO classes must extend this class.
  * 
  */
 public abstract class AbstractDAO {
     /**
-     * The Connection interface for the utilization of all DAO.
+     * The Connection interface for the utilization of all DAO.<br/>
+     * <b>USE THIS CONNECTION OR ELSE HORRIBLE THINGS WILL HAPPEN.</b>
      * @see java.sql.Connection
      */
     protected final Connection connection;

@@ -17,7 +17,12 @@ import java.util.Set;
  */
 public class InventoryItemDAOImplementation extends AbstractDAO implements InventoryItemDAO {
 
-    public InventoryItemDAOImplementation(Connection connection) {
+    /**
+     * 
+     * @param connection
+     * @throws IllegalArgumentException 
+     */
+    public InventoryItemDAOImplementation(Connection connection) throws IllegalArgumentException {
         super(connection);
     }
     
