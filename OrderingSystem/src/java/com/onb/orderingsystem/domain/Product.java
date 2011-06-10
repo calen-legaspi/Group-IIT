@@ -1,11 +1,12 @@
 package com.onb.orderingsystem.domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * Represents a product with its current price on it.
  */
-public class Product {
+public class Product implements Serializable {
 
     private int skuNumber;
     private String name;

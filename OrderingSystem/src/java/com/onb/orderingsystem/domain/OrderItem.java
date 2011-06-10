@@ -1,5 +1,6 @@
 package com.onb.orderingsystem.domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
@@ -7,7 +8,7 @@ import java.math.BigDecimal;
  * Duplication check is done through Product comparison, 
  * So no two OrderItems with the same Product can exist on the same Set.
  */
-public class OrderItem {
+public class OrderItem implements Serializable {
 
     private int id;
     private int quantity;

@@ -1,5 +1,6 @@
 package com.onb.orderingsystem.domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.LinkedHashSet;
@@ -10,7 +11,7 @@ import java.util.Set;
  * An Order can be cancelled and/or modified by default. 
  * Editing of certain details is locked when the status is elevated to provide data integrity.
  */
-public class Order {
+public class Order implements Serializable {
     //TODO: perform calculations on the discount
 
     private int orderNumber;

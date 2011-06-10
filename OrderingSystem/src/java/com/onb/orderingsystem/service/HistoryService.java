@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.onb.orderingsystem.service;
 
 import com.onb.orderingsystem.domain.Customer;
@@ -10,8 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Service class for Use Case #03: Order History.
- * 
+ * Service class for Use Case #03: <b>Order History</b>.
  */
 public interface HistoryService {
     
