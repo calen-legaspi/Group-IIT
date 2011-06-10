@@ -7,7 +7,7 @@ import java.sql.Connection;
  * All DAO classes must extend this class.
  * 
  */
-public abstract class AbstractDAO {
+public abstract class AbstractDao {
     /**
      * The Connection interface for the utilization of all DAO.<br/>
      * <b>USE THIS CONNECTION OR ELSE HORRIBLE THINGS WILL HAPPEN.</b>
@@ -20,7 +20,7 @@ public abstract class AbstractDAO {
      * @param connection the data source.
      * @see java.sql.Connection
      */
-    public AbstractDAO(Connection connection) throws IllegalArgumentException {
+    public AbstractDao(Connection connection) throws IllegalArgumentException {
         if(connection == null) {
             throw new IllegalArgumentException("Invalid Connection.");
         }

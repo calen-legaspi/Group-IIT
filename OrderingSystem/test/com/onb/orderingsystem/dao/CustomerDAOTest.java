@@ -8,7 +8,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CustomerDAOTest {
-    private CustomerDAO customerDAO;
+    private CustomerDao customerDAO;
     
    
     @Before
@@ -32,7 +32,7 @@ public class CustomerDAOTest {
     }
 
     @Test
-    public void testGetCustomerCreditLimitNotExceeded() throws DAOException {
+    public void testGetCustomerCreditLimitNotExceeded() throws DaoException {
         Set<Customer> availableCustomers = customerDAO.getCustomersCreditLimitNotExceeded();
         
         int expected = 5;
@@ -42,7 +42,7 @@ public class CustomerDAOTest {
     }
     
     @Test
-    public void testGetAllCustomers() throws DAOException {
+    public void testGetAllCustomers() throws DaoException {
         Set<Customer> allCustomers = customerDAO.getCustomersCreditLimitNotExceeded();
         
         int expected = 10;
@@ -52,7 +52,7 @@ public class CustomerDAOTest {
     }
     
     @Test
-    public void testGetCustomersWithUnpaidOrders() throws DAOException {
+    public void testGetCustomersWithUnpaidOrders() throws DaoException {
         Set<Customer> customersWithUnpaidAmount = customerDAO.getCustomersWithUnpaidOrders();
         
         int expected = 5;

@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.onb.orderingsystem.domain;
 
 import java.util.Set;
@@ -18,7 +14,7 @@ public class OrderTest {
     @Before
     public void setUp() {
         Product p = new Product(1, "Product 1", new BigDecimal("10000.00")); 
-        
+       
         /*
          * Setup a normal order amounting to 10,000
          */

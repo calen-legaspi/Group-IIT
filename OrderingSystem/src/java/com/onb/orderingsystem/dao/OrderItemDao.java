@@ -5,13 +5,13 @@ import com.onb.orderingsystem.domain.OrderItem;
 /**
  * Database CRUD for the OrderItem object.
  */
-public interface OrderItemDAO {
+public interface OrderItemDao {
     
     /**
      * Inserts a new order item into the database.
      * @param orderItem the OrderItem object to persist into the database.
      * @throws IllegalArgumentException if the parameter is null.
-     * @throws DAOException if something goes wrong while persisting the object.
+     * @throws DaoException if something goes wrong while persisting the object.
      */
-    public void createOrderItem(OrderItem orderItem) throws IllegalArgumentException, DAOException;
+    public void createOrderItem(OrderItem orderItem) throws IllegalArgumentException, DaoException;
 }

@@ -23,6 +23,8 @@ public class UserTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
+       
+        
         User u = new User(1, "User1", "Password1");
 
         Class c = u.getClass();
