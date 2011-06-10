@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.onb.orderingsystem.dao.jdbc;
 
 import com.onb.orderingsystem.dao.AbstractDAO;
@@ -12,8 +8,9 @@ import java.sql.Connection;
 import java.util.Set;
 
 /**
- *
- * @author lyndon
+ * Implementation of the CustomerDAO interface.
+ * @see com.onb.orderingsystem.dao.CustomerDAO
+ * @see com.onb.orderingsystem.dao.AbstractDAO
  */
 public class CustomerDAOImplementation extends AbstractDAO implements CustomerDAO {
     
@@ -21,16 +18,31 @@ public class CustomerDAOImplementation extends AbstractDAO implements CustomerDA
         super(connection);
     }
 
+    /**
+     * @see com.onb.orderingsystem.dao.CustomerDAO
+     * @return
+     * @throws DAOException 
+     */
     @Override
     public Set<Customer> getCustomersCreditLimitNotExceeded() throws DAOException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    /**
+     * @see com.onb.orderingsystem.dao.CustomerDAO
+     * @return
+     * @throws DAOException 
+     */
     @Override
     public Set<Customer> getCustomersWithUnpaidOrders() throws DAOException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    /**
+     * @see com.onb.orderingsystem.dao.CustomerDAO
+     * @return
+     * @throws DAOException 
+     */
     @Override
     public Set<Customer> getAllCustomers() throws DAOException {
         throw new UnsupportedOperationException("Not supported yet.");

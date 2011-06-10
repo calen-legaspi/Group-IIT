@@ -22,16 +22,35 @@ public class OrderDAOImplementation extends AbstractDAO implements OrderDAO {
         super(connection);
     }
 
+    /**
+     * @see com.onb.orderingsystem.dao.OrderDAO
+     * @param order
+     * @throws DAOException
+     * @throws IllegalArgumentException 
+     */
     @Override
     public void createOrder(Order order) throws DAOException, IllegalArgumentException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    /**
+     * @see com.onb.orderingsystem.dao.OrderDAO
+     * @param order
+     * @throws DAOException
+     * @throws IllegalArgumentException 
+     */
     @Override
     public void updateOrder(Order order) throws DAOException, IllegalArgumentException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    /**
+     * @see com.onb.orderingsystem.dao.OrderDAO
+     * @param customer
+     * @return
+     * @throws DAOException
+     * @throws IllegalArgumentException 
+     */
     @Override
     public List<Order> getOrderByCustomerSortedByDateDescending(Customer customer) throws DAOException, IllegalArgumentException {
         throw new UnsupportedOperationException("Not supported yet.");

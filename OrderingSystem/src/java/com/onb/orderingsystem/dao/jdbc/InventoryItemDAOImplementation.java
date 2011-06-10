@@ -20,11 +20,23 @@ public class InventoryItemDAOImplementation extends AbstractDAO implements Inven
     public InventoryItemDAOImplementation(Connection connection) {
         super(connection);
     }
+    
+    /**
+     * @see com.onb.orderingsystem.dao.InventoryItemDAO
+     * @return
+     * @throws DAOException 
+     */
     @Override
     public Set<InventoryItem> getAvailableInventoryItems() throws DAOException {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    /**
+     * @see com.onb.orderingsystem.dao.InventoryItemDAO
+     * @param inventoryItem
+     * @throws DAOException
+     * @throws IllegalArgumentException 
+     */
     @Override
     public void updateInventoryItem(InventoryItem inventoryItem) throws DAOException, IllegalArgumentException {
         throw new UnsupportedOperationException("Not supported yet.");
