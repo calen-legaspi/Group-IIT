@@ -4,6 +4,7 @@
  */
 package com.onb.orderingsystem.domain;
 
+import java.util.Set;
 import java.math.BigDecimal;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +13,7 @@ import static org.junit.Assert.*;
 public class OrderTest {
     private Order normalOrder;
     private Order discountedOrder;
+    private Order orderWithConsolidation;
     
     @Before
     public void setUp() {
@@ -29,6 +31,14 @@ public class OrderTest {
         discountedOrder = new Order();
         discountedOrder.addOrderItem(new OrderItem(2, p, 1));
         discountedOrder.setDiscountStatus(DiscountStatus.TEN_PERCENT);
+        
+        /*
+         * Order the same product twice. 
+         * Quantity should be added instead of creating a new entry.
+         */
+        orderWithConsolidation = new Order();
+        orderWithConsolidation.addOrderItem(new OrderItem(p, 10));
+        orderWithConsolidation.addOrderItem(new OrderItem(p, 20));
     }
 
     /**
@@ -53,5 +63,15 @@ public class OrderTest {
         
         assertEquals(2, actualAmount.scale());
         assertEquals(expectedAmount, actualAmount);
+    }
+    
+    @Test
+    public void testOrderItemConsolidation() {
+        Set<OrderItem> orderItems = orderWithConsolidation.getOrderItems();
+       
+        int expected = 1;
+        int actualSize = orderItems.size();
+        
+        assertEquals(expected, actualSize);
     }
 }

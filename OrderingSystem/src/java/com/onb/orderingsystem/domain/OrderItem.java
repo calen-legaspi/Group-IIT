@@ -66,4 +66,34 @@ public class OrderItem {
     public int getQuantity() {
         return quantity;
     }
+    
+    /**
+     * 
+     * @return the hash code of the OrderItem.
+     */
+    @Override
+    public int hashCode() {
+        return product.hashCode();
+    }
+
+    /**
+     * 
+     * @param obj the order item to compare this to.
+     * @return true if the OrderItem contains the same product.
+     * @throws IllegalArgumentException if the parameter is null or not an OrderItem.
+     */
+    @Override
+    public boolean equals(Object obj) throws IllegalArgumentException {
+        if(obj == null) {
+            throw new IllegalArgumentException("Parameter cant be null.");
+        }
+        if(!(obj instanceof OrderItem)) {
+            throw new IllegalArgumentException("Parameter must be an OrderItem.");
+        }
+        OrderItem oi = (OrderItem)obj;
+        if(oi.product == product) {
+            return true;
+        }
+        return true;
+    }
 }
