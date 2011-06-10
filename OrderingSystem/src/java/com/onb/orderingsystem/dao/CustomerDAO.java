@@ -12,6 +12,7 @@ import java.util.Set;
  * @author The Architect
  */
 public interface CustomerDAO {
-    public Set<Customer> getAvailableCustomers();
-    public Set<Customer> getAllCustomers();
+    public Set<Customer> getCustomersCreditLimitNotExceeded() throws DAOException;
+    public Set<Customer> getCustomerWithUnpaidOrders() throws DAOException;
+    public Set<Customer> getAllCustomers() throws DAOException;
 }

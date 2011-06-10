@@ -4,6 +4,8 @@
  */
 package com.onb.orderingsystem.dao;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -14,19 +16,31 @@ import static org.junit.Assert.*;
  * @author lyndon
  */
 public class OrderDAOTest {
-    
-    public OrderDAOTest() {
+    private OrderDAO orderDAO;
+
+    @Before
+    public void setUpClass() throws Exception {
+        /*
+         * setup the database.
+         *
+         */
     }
 
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownClass() throws Exception {
+    @After
+    public void tearDownClass() throws Exception {
+        /*
+         * Unpopulate the test database.
+         * 
+         */
+        //TODO: write codes to unpopulate the test database
     }
 
     @Test
-    public void testSomeMethod() {
+    public void testCreateOrder() {
+    }
+    
+    @Test
+    public void testUpdateOrder() {
+        
     }
 }

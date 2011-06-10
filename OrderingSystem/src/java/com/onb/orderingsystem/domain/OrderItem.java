@@ -12,6 +12,7 @@ public class OrderItem {
     private int id;
     private int quantity;
     private Product product;
+    private Order order;
 
     /**
      * @param product
@@ -95,5 +96,38 @@ public class OrderItem {
             return true;
         }
         return true;
+    }
+    
+    /**
+     * Sets the order reference to the order conatining this orderitem.
+     * @param order the order reference to the order containing this orderitem.
+     * @throws IllegalArgumentException if the parameter is null.
+     * @throws IllegalStateException if the order is in an unmodifiable state.
+     */
+    public void setOrder(Order order) throws IllegalArgumentException, IllegalStateException{
+        if(order == null) {
+            throw new IllegalArgumentException("Order cant be null.");
+        }
+        if(this.order == null) {
+            this.order = order;
+        } else {
+            if(order.getOrderStatus() == OrderStatus.PROCESSING) {
+                this.order = order;
+            } else {
+                throw new IllegalStateException("Order item cannot be modified at this state.");
+            }
+        }
+    }
+    
+    /**
+     * Gets the order containing the order item.
+     * @return the reference to the order containing this orderitem.
+     * @throws NullPointerException 
+     */
+    public Order getOrder() throws NullPointerException {
+        if(order == null) {
+            throw new NullPointerException("Order was not yet set.");
+        }
+        return order;
     }
 }

@@ -8,8 +8,6 @@ import org.junit.Before;
 import org.junit.After;
 import java.util.Set;
 import com.onb.orderingsystem.domain.Customer;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -24,9 +22,10 @@ public class CustomerDAOTest {
     @Before
     public void setUp() throws Exception {
         /*
-         * Setup a database of 10 customers.
+         * Setup a database of 15 customers.
          * Five of which must be available*.
          * Five must exceed the credit limit.
+         * Five should have credits.
          */
         //TODO: write codes to do the things written above
     }
@@ -41,8 +40,8 @@ public class CustomerDAOTest {
     }
 
     @Test
-    public void testGetAvailableCustomers() {
-        Set<Customer> availableCustomers = customerDAO.getAvailableCustomers();
+    public void testGetAvailableCustomers() throws DAOException {
+        Set<Customer> availableCustomers = customerDAO.getCustomersCreditLimitNotExceeded();
         
         int expected = 5;
         int actual = availableCustomers.size();
@@ -51,12 +50,17 @@ public class CustomerDAOTest {
     }
     
     @Test
-    public void testGetAllCustomers() {
-        Set<Customer> allCustomers = customerDAO.getAvailableCustomers();
+    public void testGetAllCustomers() throws DAOException {
+        Set<Customer> allCustomers = customerDAO.getCustomersCreditLimitNotExceeded();
         
         int expected = 10;
         int actual = allCustomers.size();
       
         assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void testGetCustomersWithUnpaidAmount() {
+        
     }
 }
