@@ -11,6 +11,6 @@ import com.onb.orderingsystem.domain.Order;
  * @author The Architect
  */
 public interface OrderDAO {
-    public void createOrder(Order order);
-    public void updateOrder(Order order);
+    public void createOrder(Order order) throws DAOException, IllegalArgumentException;
+    public void updateOrder(Order order) throws DAOException, IllegalArgumentException;
 }

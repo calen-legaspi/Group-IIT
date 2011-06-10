@@ -17,5 +17,4 @@ public interface OrderService {
     public Set<Customer> getAvailableCustomers() throws ServiceException;
     public Set<InventoryItem> getAvailableInventoryItems() throws ServiceException; 
     public void createOrder(Order order, Customer customer) throws ServiceException, IllegalArgumentException;
-    public boolean isValidOrder(Order order, Customer customer) throws ServiceException, IllegalArgumentException;
 }

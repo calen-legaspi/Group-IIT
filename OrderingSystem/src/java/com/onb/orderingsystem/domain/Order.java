@@ -18,6 +18,7 @@ public class Order {
     private Set<OrderItem> orderItems;
     private OrderStatus orderStatus;
     private DiscountStatus discountStatus;
+    private Customer customer;
     /*
      * Amount recorded during the time when it was ordered.
      */
@@ -202,5 +203,33 @@ public class Order {
     public BigDecimal getAmount() {
         updateAmount();
         return amount.setScale(2);
+    }
+    
+    /**
+     * 
+     * @param customer
+     * @throws IllegalArgumentException
+     * @throws IllegalStateException 
+     */
+    public void setCustomer(Customer customer) throws IllegalArgumentException, IllegalStateException {
+        if(customer == null) {
+            throw new IllegalArgumentException("Customer cant be null.");
+        }
+        if(orderStatus != OrderStatus.PROCESSING) {
+            throw new IllegalStateException("Customer cannot be modified at this state.");
+        }
+        this.customer = customer;
+    }
+    
+    /**
+     * Gets the customer reference.
+     * @return the customer who ordered this order.
+     * @throws NullPointerException if the customer was not yet set.
+     */
+    public Customer getCustomer() throws NullPointerException {
+        if(customer == null) {
+            throw new NullPointerException("The customer was not yet set.");
+        }
+        return customer;
     }
 }

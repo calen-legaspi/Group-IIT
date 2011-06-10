@@ -12,6 +12,6 @@ import java.util.Set;
  * @author The Architect
  */
 public interface InventoryItemDAO {
-    public Set<InventoryItem> getAvailableInventoryItems();
-    public void updateInventoryItem(InventoryItem inventoryItem);
+    public Set<InventoryItem> getAvailableInventoryItems() throws DAOException;
+    public void updateInventoryItem(InventoryItem inventoryItem) throws DAOException, IllegalArgumentException;
 }
