@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
  *
  * @author lyndon
  */
-public class InventoryItemDAOTest {
+public class InventoryItemDaoTest {
     private InventoryItemDao inventoryItemDAO;
 
     @Before

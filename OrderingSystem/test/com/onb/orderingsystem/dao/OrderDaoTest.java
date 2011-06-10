@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
  *
  * @author lyndon
  */
-public class OrderDAOTest {
+public class OrderDaoTest {
     private OrderDao orderDAO;
 
     @Before

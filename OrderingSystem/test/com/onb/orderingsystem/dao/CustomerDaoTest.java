@@ -7,7 +7,7 @@ import com.onb.orderingsystem.domain.Customer;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class CustomerDAOTest {
+public class CustomerDaoTest {
     private CustomerDao customerDAO;
     
    
