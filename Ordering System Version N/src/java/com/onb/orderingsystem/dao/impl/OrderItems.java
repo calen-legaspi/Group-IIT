@@ -2,12 +2,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.onb.orderingsystem.dao.imp;
+package com.onb.orderingsystem.dao.impl;
 
 /**
  *
- * @author The Architect
+ * @author juliusmercons
  */
-public class DAOX {
+class OrderItems {
     
 }
