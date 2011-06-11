@@ -42,6 +42,10 @@ public class JdbcDAOFactory implements DAOFactory {
         return instance;
     }
 
+    /**
+     * 
+     * @return 
+     */
     @Override
     public CustomerDao getCustomerDao() {
         if(!daoInstances.containsKey(Customer.class)) {
@@ -50,6 +54,10 @@ public class JdbcDAOFactory implements DAOFactory {
         return (CustomerDao)daoInstances.get(Customer.class);
     }
 
+    /**
+     * 
+     * @return 
+     */
     @Override
     public InventoryItemDao getInventoryItemDao() {
         if(!daoInstances.containsKey(InventoryItem.class)) {
@@ -58,6 +66,10 @@ public class JdbcDAOFactory implements DAOFactory {
         return (InventoryItemDao)daoInstances.get(InventoryItem.class);
     }
 
+    /**
+     * 
+     * @return 
+     */
     @Override
     public OrderDao getOrderDao() {
         if(!daoInstances.containsKey(Order.class)) {
@@ -66,6 +78,10 @@ public class JdbcDAOFactory implements DAOFactory {
         return (OrderDao)daoInstances.get(Order.class);
     }
 
+    /**
+     * 
+     * @return 
+     */
     @Override
     public OrderItemDao getOrderItemDao() {
         if(!daoInstances.containsKey(OrderItem.class)) {
