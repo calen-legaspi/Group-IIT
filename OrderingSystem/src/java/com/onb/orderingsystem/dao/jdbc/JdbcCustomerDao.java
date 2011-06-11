@@ -12,14 +12,14 @@ import java.util.Set;
  * @see com.onb.orderingsystem.dao.CustomerDao
  * @see com.onb.orderingsystem.dao.AbstractDao
  */
-public class CustomerDaoJdbc extends AbstractDao implements CustomerDao {
+public class JdbcCustomerDao extends AbstractDao implements CustomerDao {
     
     /**
      * @see java.sql.Connection
      * @param connection 
      * @throws IllegalArgumentException if the connection is null.
      */
-    public CustomerDaoJdbc(Connection connection) throws IllegalArgumentException {
+    public JdbcCustomerDao(Connection connection) throws IllegalArgumentException {
         super(connection);
     }
 
