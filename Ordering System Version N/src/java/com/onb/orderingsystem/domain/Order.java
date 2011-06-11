@@ -18,6 +18,7 @@ public class Order {
     private Set<OrderItem> orderItems;
     private OrderStatus orderStatus;
     private DiscountStatus discountStatus;
+    private Customer customer;
     /*
      * Amount recorded during the time when it was ordered.
      */
@@ -92,6 +93,10 @@ public class Order {
      */
     public void setDiscountStatus(DiscountStatus discountStatus) {
         this.discountStatus = discountStatus;
+    }
+    
+    public void setCustomer(Customer customer){
+        this.customer = customer;
     }
 
     /**

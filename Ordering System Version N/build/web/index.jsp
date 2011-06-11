@@ -9,9 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Ordering System | Home</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h3>Ordering System</h3>
+        <h4>Select Operation:</h4>
+        <a href="UnpaidCustomers">View Customers With Unpaid Orders</a>
     </body>
 </html>
