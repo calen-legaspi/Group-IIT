@@ -13,7 +13,7 @@
     </env-entry>
     <env-entry>
         <description>The JDBC driver used in the production environment.</description>
-        <env-entry-name>PRODUCTION_CONNECTIONDRIVER</env-entry-name>
+        <env-entry-name>PRODUCTION_DBCONNECTIONDRIVER</env-entry-name>
         <env-entry-type>java.lang.String</env-entry-type>
         <env-entry-value>mysql</env-entry-value>
     </env-entry>
@@ -42,12 +42,42 @@
         <env-entry-value>password</env-entry-value>
     </env-entry>
     <env-entry>
+        <env-entry-name>DEVELOPMENT_DBNAME</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>orderingsystem_test</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>DEVELOPMENT_DBCONNECTIONDRIVER</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>mysql</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>DEVELOPMENT_DBURL</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>127.0.0.1</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>DEVELOPMENT_DBPORT</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>3306</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>DEVELOPMENT_USERNAME</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>root</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>DEVELOPMENT_PASSWORD</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>password</env-entry-value>
+    </env-entry>
+    <env-entry>
         <env-entry-name>TEST_DBNAME</env-entry-name>
         <env-entry-type>java.lang.String</env-entry-type>
         <env-entry-value>orderingsystem_test</env-entry-value>
     </env-entry>
     <env-entry>
-        <env-entry-name>TEST_CONNECTIONDRIVER</env-entry-name>
+        <env-entry-name>TEST_DBCONNECTIONDRIVER</env-entry-name>
         <env-entry-type>java.lang.String</env-entry-type>
         <env-entry-value>mysql</env-entry-value>
     </env-entry>
