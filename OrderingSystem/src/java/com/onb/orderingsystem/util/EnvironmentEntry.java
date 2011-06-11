@@ -34,7 +34,7 @@ public class EnvironmentEntry {
             Context environment = (Context)context.lookup("java:comp/env");
             entry = (String)environment.lookup(entryName);
         } catch(NamingException e) {
-            throw new EnvironmentEntryException("The entry does not exist.");
+            throw new EnvironmentEntryException("The entry does not exist:"+entryName);
         } catch(ClassCastException e) {
             throw new ClassCastException("The environment entry does not exist or is not a String");
         }

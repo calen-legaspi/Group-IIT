@@ -10,7 +10,6 @@ import java.util.Set;
  * A customer owns a list of orders, a name, and an id to uniquely identify itself.
  */
 public class Customer implements Serializable {
-    private int d;
     private int id;
     private String name;
     private Set<Order> orders;

@@ -25,7 +25,7 @@ public enum ApplicationEnvironment {
             dbUsername          = EnvironmentEntry.getAsString(prepend+"_USERNAME");
             dbPassword          = EnvironmentEntry.getAsString(prepend+"_PASSWORD");
         } catch(EnvironmentEntryException e) {
-            System.exit(1);
+            System.out.print(e);
         }
         
     }

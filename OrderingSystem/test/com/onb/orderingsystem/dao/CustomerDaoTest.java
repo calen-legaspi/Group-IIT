@@ -1,8 +1,12 @@
 package com.onb.orderingsystem.dao;
 
+import com.onb.orderingsystem.dao.jdbc.JdbcDAOFactory;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.dbunit.dataset.IDataSet;
 import java.util.Set;
 import com.onb.orderingsystem.domain.Customer;
+import com.onb.orderingsystem.util.ApplicationEnvironment;
 import org.dbunit.DBTestCase;
 import org.dbunit.PropertiesBasedJdbcDatabaseTester;
 import org.junit.Test;
@@ -14,7 +18,12 @@ public class CustomerDaoTest extends DBTestCase {
     
     public CustomerDaoTest(String name) {
         super(name);
-        System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_DRIVER_CLASS,"");
+        System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_DRIVER_CLASS,"com.mysql.jdbc");
+        System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_CONNECTION_URL,"jdbc:m");
+        System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_USERNAME,"com.mysql.jdbc");
+        System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_PASSWORD,"com.mysql.jdbc");
+        System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_SCHEMA,"");
+        
     }
     
     @Override
@@ -26,33 +35,10 @@ public class CustomerDaoTest extends DBTestCase {
    
     @Test
     public void testGetCustomerCreditLimitNotExceeded() throws DaoException {
-        Set<Customer> availableCustomers = customerDAO.getCustomersCreditLimitNotExceeded();
+        //ApplicationEnvironment x = ApplicationEnvironment.TEST;
         
-        int expected = 5;
-        int actual = availableCustomers.size();
-      
-        assertEquals(expected, actual);
+        
     }
     
-    @Test
-    public void testGetAllCustomers() throws DaoException {
-        Set<Customer> allCustomers = customerDAO.getCustomersCreditLimitNotExceeded();
-        
-        int expected = 10;
-        int actual = allCustomers.size();
-      
-        assertEquals(expected, actual);
-    }
-    
-    @Test
-    public void testGetCustomersWithUnpaidOrders() throws DaoException {
-        Set<Customer> customersWithUnpaidAmount = customerDAO.getCustomersWithUnpaidOrders();
-        
-        int expected = 5;
-        int actual = customersWithUnpaidAmount.size();
-        
-        assertEquals(expected, actual);
-    }
-
-
+   
 }

@@ -12,7 +12,6 @@ import java.util.Set;
  * Editing of certain details is locked when the status is elevated to provide data integrity.
  */
 public class Order implements Serializable {
-    //TODO: perform calculations on the discount
 
     private int orderNumber;
     private Date date;
