@@ -5,15 +5,18 @@
 package com.onb.orderingsystem.service;
 import com.onb.orderingsystem.dao.*;
 import com.onb.orderingsystem.dao.impl.CustomerDAOimp;
+import com.onb.orderingsystem.dao.impl.OrderDAOImp;
 import com.onb.orderingsystem.domain.*;
+import java.util.Set;
 /**
  *
  * @author juliusmercons
  */
-public class AddCustomer {
-    public void addCustomerData(String name){
-        Customer cust = new Customer(name);
-        CustomerDAO dao =new CustomerDAOimp();
-        dao.create(cust);
+public class OrderHistoryService {
+    
+    public Set<Order> getUnpaidOrdersByCustomer(Customer customer){
+        return new OrderDAOImp().getCustomerUnpaidOrders(customer);
     }
+    
+    
 }

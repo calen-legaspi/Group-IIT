@@ -36,7 +36,7 @@ public class Customer {
      */
     public Customer(int id, String name, Set<Order> orders) throws IllegalArgumentException {
         this(name);
-        if (name == null || orders == null) {
+        if (name == null) {
             throw new IllegalArgumentException("One of the parameter is null.");
         }
         this.id = id;
@@ -78,6 +78,10 @@ public class Customer {
      */
     public Set<Order> getOrders() {
         return orders;
+    }
+    
+    public void setOrders(Set<Order> orders){
+        this.orders = orders;
     }
 
     /**
