@@ -1,12 +1,13 @@
 package com.onb.orderingsystem.domain;
 
+import java.io.Serializable;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
  * This class represents an inventory to contain the inventory items of a certain warehouse, storage area, etc.
  */
-public class Inventory {
+public class Inventory implements Serializable {
 
     private int id;
     private Set<InventoryItem> inventoryItems;

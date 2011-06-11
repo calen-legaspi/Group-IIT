@@ -15,8 +15,8 @@ import static org.junit.Assert.*;
  *
  * @author lyndon
  */
-public class OrderDAOTest {
-    private OrderDAO orderDAO;
+public class OrderDaoTest {
+    private OrderDao orderDAO;
 
     @Before
     public void setUpClass() throws Exception {

@@ -23,6 +23,8 @@ public class UserTest {
 
     @BeforeClass
     public static void setUpClass() throws Exception {
+       
+        
         User u = new User(1, "User1", "Password1");
 
         Class c = u.getClass();
@@ -63,7 +65,7 @@ public class UserTest {
         }
 
 
-        con = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test", "root", "password");
+        con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test", "root", "password");
 
         pstmt = con.prepareStatement(
                 "INSERT INTO testing(name) VALUES(?)");

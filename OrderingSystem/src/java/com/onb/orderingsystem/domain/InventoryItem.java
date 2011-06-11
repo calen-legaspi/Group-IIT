@@ -1,10 +1,12 @@
 package com.onb.orderingsystem.domain;
 
+import java.io.Serializable;
+
 /**
  * This class represents an item in the inventory. 
  * An InventoryItem primarily consists of the Product and its quantity.
  */
-public class InventoryItem {
+public class InventoryItem implements Serializable {
 
     private int id;
     private int quantity;

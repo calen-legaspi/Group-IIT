@@ -1,5 +1,6 @@
 package com.onb.orderingsystem.domain;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
@@ -8,7 +9,7 @@ import java.util.Set;
  * The Customer class represents the Customer. 
  * A customer owns a list of orders, a name, and an id to uniquely identify itself.
  */
-public class Customer {
+public class Customer implements Serializable {
     private int d;
     private int id;
     private String name;

@@ -5,8 +5,7 @@
 package com.onb.orderingsystem.service;
 
 /**
- *
- * @author lyndon
+ * The Exception object representing an exception in the service layer.
  */
 public class ServiceException extends Exception {
     

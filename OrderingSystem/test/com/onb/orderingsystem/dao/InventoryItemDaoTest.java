@@ -17,8 +17,8 @@ import static org.junit.Assert.*;
  *
  * @author lyndon
  */
-public class InventoryItemDAOTest {
-    private InventoryItemDAO inventoryItemDAO;
+public class InventoryItemDaoTest {
+    private InventoryItemDao inventoryItemDAO;
 
     @Before
     public void setUp() throws Exception {
@@ -41,7 +41,7 @@ public class InventoryItemDAOTest {
     }
 
     @Test
-    public void testGetAvailableInventoryItems() throws DAOException {
+    public void testGetAvailableInventoryItems() throws DaoException {
         Set<InventoryItem> inventoryItems = inventoryItemDAO.getAvailableInventoryItems();
         
         int expected = 5;

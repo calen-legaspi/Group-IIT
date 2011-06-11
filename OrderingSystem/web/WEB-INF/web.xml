@@ -1,12 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<web-app xmlns="http://java.sun.com/xml/ns/javaee"
-	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-	 version="3.0">
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    <env-entry>
+        <description>The name of the database used in the production environment.</description>
+        <env-entry-name>PRODUCTION_DBNAME</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>orderingsystem_production</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <description>The JDBC driver used in the production environment.</description>
+        <env-entry-name>PRODUCTION_CONNECTIONDRIVER</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>mysql</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <description>The url of the production database.</description>
+        <env-entry-name>PRODUCTION_DBURL</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>127.0.0.1</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <description>The port number of the production database.</description>
+        <env-entry-name>PRODUCTION_DBPORT</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>3306</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <description>The username to use in the production database.</description>
+        <env-entry-name>PRODUCTION_USERNAME</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>root</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <description>The password of the production database.</description>
+        <env-entry-name>PRODUCTION_PASSWORD</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>password</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_DBNAME</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>orderingsystem_test</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_CONNECTIONDRIVER</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>mysql</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_DBURL</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>127.0.0.1</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_DBPORT</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>3306</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_USERNAME</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>root</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_PASSWORD</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>password</env-entry-value>
+    </env-entry>
 </web-app>
