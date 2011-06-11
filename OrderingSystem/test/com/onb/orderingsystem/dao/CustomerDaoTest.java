@@ -1,36 +1,29 @@
 package com.onb.orderingsystem.dao;
 
-import org.junit.Before;
-import org.junit.After;
+import org.dbunit.dataset.IDataSet;
 import java.util.Set;
 import com.onb.orderingsystem.domain.Customer;
+import org.dbunit.DBTestCase;
+import org.dbunit.PropertiesBasedJdbcDatabaseTester;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-public class CustomerDaoTest {
+public class CustomerDaoTest extends DBTestCase {
     private CustomerDao customerDAO;
     
+    //DBUNIT METHODS START//
+    
+    public CustomerDaoTest(String name) {
+        super(name);
+        System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_DRIVER_CLASS,"");
+    }
+    
+    @Override
+    protected IDataSet getDataSet() throws Exception {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+        
+    //DBUNIT METHODS END//
    
-    @Before
-    public void setUp() throws Exception {
-        /*
-         * Setup a database of 15 customers.
-         * Five of which must be available*.
-         * Five must exceed the credit limit.
-         * Five should have credits.
-         */
-        //TODO: write codes to do the things written above
-    }
-
-    @After
-    public void tearDown() throws Exception {
-        customerDAO = null;
-        /*
-         * Empty the database
-         */
-        //TODO: write codes to empty the test database
-    }
-
     @Test
     public void testGetCustomerCreditLimitNotExceeded() throws DaoException {
         Set<Customer> availableCustomers = customerDAO.getCustomersCreditLimitNotExceeded();
@@ -60,4 +53,6 @@ public class CustomerDaoTest {
         
         assertEquals(expected, actual);
     }
+
+
 }

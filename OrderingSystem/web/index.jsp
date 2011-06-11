@@ -3,7 +3,11 @@
     Created on : Jun 9, 2011, 10:03:16 PM
     Author     : The Architect
 --%>
+<%@page import="com.onb.orderingsystem.util.EnvironmentEntry"%>
+<% 
 
+String str = EnvironmentEntry.getAsString("testString");     
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +16,6 @@
         <title>Ordering System</title>
     </head>
     <body>
-        <h1>Ordering System Welcome Page!!!</h1>
+        <h1>Ordering System Welcome Page!!! <%= str %></h1>
     </body>
 </html>
