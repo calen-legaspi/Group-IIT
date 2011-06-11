@@ -65,7 +65,7 @@ public class UserTest {
         }
 
 
-        con = DriverManager.getConnection("jdbc:mysql://127.0.0.1/test", "root", "password");
+        con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test", "root", "password");
 
         pstmt = con.prepareStatement(
                 "INSERT INTO testing(name) VALUES(?)");

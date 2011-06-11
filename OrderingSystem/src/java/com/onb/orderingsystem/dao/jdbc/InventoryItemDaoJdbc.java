@@ -16,14 +16,14 @@ import java.util.Set;
  * @see com.onb.orderingsystem.dao.InventoryItemDao
  * @see com.onb.orderingsystem.dao.AbstractDao
  */
-public class InventoryItemDaoJdbcImpl extends AbstractDao implements InventoryItemDao {
+public class InventoryItemDaoJdbc extends AbstractDao implements InventoryItemDao {
 
     /**
      * 
      * @param connection
      * @throws IllegalArgumentException 
      */
-    public InventoryItemDaoJdbcImpl(Connection connection) throws IllegalArgumentException {
+    public InventoryItemDaoJdbc(Connection connection) throws IllegalArgumentException {
         super(connection);
     }
     

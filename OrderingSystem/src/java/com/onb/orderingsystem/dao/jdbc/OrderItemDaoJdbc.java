@@ -15,9 +15,9 @@ import java.sql.Connection;
  * @see com.onb.orderingsystem.dao.OrderItemDao
  * @see com.onb.orderingsystem.dao.AbstractDao
  */
-public class OrderItemDaoJdbcImpl extends AbstractDao implements OrderItemDao {
+public class OrderItemDaoJdbc extends AbstractDao implements OrderItemDao {
     
-    public OrderItemDaoJdbcImpl(Connection connection) throws IllegalArgumentException {
+    public OrderItemDaoJdbc(Connection connection) throws IllegalArgumentException {
         super(connection);
     }
 

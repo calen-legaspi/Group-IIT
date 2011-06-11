@@ -6,8 +6,69 @@
         </session-timeout>
     </session-config>
     <env-entry>
-        <env-entry-name>testString</env-entry-name>
+        <description>The name of the database used in the production environment.</description>
+        <env-entry-name>PRODUCTION_DBNAME</env-entry-name>
         <env-entry-type>java.lang.String</env-entry-type>
-        <env-entry-value>Lyndon Wafu</env-entry-value>
+        <env-entry-value>orderingsystem_production</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <description>The JDBC driver used in the production environment.</description>
+        <env-entry-name>PRODUCTION_CONNECTIONDRIVER</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>mysql</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <description>The url of the production database.</description>
+        <env-entry-name>PRODUCTION_DBURL</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>127.0.0.1</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <description>The port number of the production database.</description>
+        <env-entry-name>PRODUCTION_DBPORT</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>3306</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <description>The username to use in the production database.</description>
+        <env-entry-name>PRODUCTION_USERNAME</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>root</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <description>The password of the production database.</description>
+        <env-entry-name>PRODUCTION_PASSWORD</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>password</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_DBNAME</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>orderingsystem_test</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_CONNECTIONDRIVER</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>mysql</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_DBURL</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>127.0.0.1</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_DBPORT</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>3306</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_USERNAME</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>root</env-entry-value>
+    </env-entry>
+    <env-entry>
+        <env-entry-name>TEST_PASSWORD</env-entry-name>
+        <env-entry-type>java.lang.String</env-entry-type>
+        <env-entry-value>password</env-entry-value>
     </env-entry>
 </web-app>

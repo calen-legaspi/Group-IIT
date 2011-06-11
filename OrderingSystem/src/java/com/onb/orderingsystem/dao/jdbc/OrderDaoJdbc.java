@@ -17,14 +17,14 @@ import java.util.List;
  * @see com.onb.orderingsystem.dao.OrderDao
  * @see com.onb.orderingsystem.dao.AbstractDao
  */
-public class OrderDaoJdbcImpl extends AbstractDao implements OrderDao {
+public class OrderDaoJdbc extends AbstractDao implements OrderDao {
     
     /**
      * 
      * @param connection
      * @throws IllegalArgumentException 
      */
-    public OrderDaoJdbcImpl(Connection connection) throws IllegalArgumentException {
+    public OrderDaoJdbc(Connection connection) throws IllegalArgumentException {
         super(connection);
     }
 
