@@ -173,7 +173,7 @@
                                     </div><div class="art-BlockContent">
                                         <div class="art-BlockContent-body">
                                             <div>
-                                                <img src="images/contact.jpg" alt="an image" style="margin: 0 auto;display:block;width:95%" />
+                                                <img src="css/images/contact.jpg" alt="an image" style="margin: 0 auto;display:block;width:95%" />
                                                 <br />
                                                 <b>Company Co.</b><br />
                                                 Las Vegas, NV 12345<br />
