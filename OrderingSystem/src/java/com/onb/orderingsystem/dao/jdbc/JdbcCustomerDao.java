@@ -108,8 +108,9 @@ public class JdbcCustomerDao extends AbstractDao implements CustomerDao {
             select.setInt(1, c.getId());
             ResultSet result = select.executeQuery();
             while(result.next()) {
-                Order o = new Order(result.getInt("order_number"), result.getDate("date"), new LinkedHashSet<OrderItem>(), OrderStatus.fromString(result.getString("order_status")), DiscountStatus.fromString(result.getString("discount_status")), result.getBigDecimal("amount"));
-                restoreOrderItemsForOrder(o);
+                Set<OrderItem> orderItems = new LinkedHashSet<OrderItem>();
+                Order o = new Order(result.getInt("order_number"), result.getDate("date"), orderItems, OrderStatus.fromString(result.getString("order_status")), DiscountStatus.fromString(result.getString("discount_status")), result.getBigDecimal("amount"));
+                restoreOrderItemsForOrder(o,orderItems);
                 c.addOrder(o);
             }
         } catch (SQLException e) {
@@ -118,7 +119,7 @@ public class JdbcCustomerDao extends AbstractDao implements CustomerDao {
     }
     
     //restores the order items for the specified order
-    private void restoreOrderItemsForOrder(Order o) throws DaoException {
+    private void restoreOrderItemsForOrder(Order o,Set<OrderItem> orderItems) throws DaoException {
         String orderItemQueryForOrder = "SELECT * FROM order_items AS oi,products AS p WHERE oi.product_sku_number = p.sku_number AND oi.order_order_number = ?";
         
         try {
@@ -127,7 +128,7 @@ public class JdbcCustomerDao extends AbstractDao implements CustomerDao {
             ResultSet result = select.executeQuery();
             while(result.next()) {
                 OrderItem oi = new OrderItem(result.getInt("oi.id"), new Product(result.getInt("p.sku_number"),result.getString("p.name"), result.getBigDecimal("p.amount")), result.getInt("oi.quantity"));
-                o.addOrderItem(oi);
+                orderItems.add(oi);
             }
         } catch (SQLException e) {
             throw new DaoException("Query ["+orderItemQueryForOrder+"] failed:"+e.getMessage());
