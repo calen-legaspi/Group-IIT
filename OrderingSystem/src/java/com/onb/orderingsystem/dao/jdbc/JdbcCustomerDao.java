@@ -119,26 +119,19 @@ public class JdbcCustomerDao extends AbstractDao implements CustomerDao {
     
     //restores the order items for the specified order
     private void restoreOrderItemsForOrder(Order o) throws DaoException {
-        String orderItemQueryForOrder = "SELECT * FROM order_items WHERE order_order_number = ?";
+        String orderItemQueryForOrder = "SELECT * FROM order_items AS oi,products AS p WHERE oi.product_sku_number = p.sku_number AND oi.order_order_number = ?";
         
         try {
             PreparedStatement select = connection.prepareStatement(orderItemQueryForOrder);
             select.setInt(1, o.getOrderNumber());
             ResultSet result = select.executeQuery();
             while(result.next()) {
-                OrderItem oi = new OrderItem(result.getInt("id"), new Product("Temp", BigDecimal.ONE), result.getInt("quantity"));
-                restoreProductForOrderItems(oi);
+                OrderItem oi = new OrderItem(result.getInt("oi.id"), new Product(result.getInt("p.sku_number"),result.getString("p.name"), result.getBigDecimal("p.amount")), result.getInt("oi.quantity"));
                 o.addOrderItem(oi);
             }
         } catch (SQLException e) {
             throw new DaoException("Query ["+orderItemQueryForOrder+"] failed:"+e.getMessage());
         }
-    }
-    
-    //restores the product for the specified orderitem
-    private void restoreProductForOrderItems(OrderItem oi) {
-        String productQueryForOrderItem = "SELECT * FROM products WHERE sku_number = ?";
-        //TODO: finish this up
     }
     
 }
