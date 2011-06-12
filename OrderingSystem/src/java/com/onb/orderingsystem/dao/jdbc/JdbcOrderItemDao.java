@@ -17,7 +17,7 @@ import java.sql.Connection;
  */
 public class JdbcOrderItemDao extends AbstractDao implements OrderItemDao {
     
-    public JdbcOrderItemDao(Connection connection) throws IllegalArgumentException {
+    JdbcOrderItemDao(Connection connection) throws IllegalArgumentException {
         super(connection);
     }
 

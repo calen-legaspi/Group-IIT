@@ -26,7 +26,6 @@ public class JdbcDAOFactory implements DAOFactory {
         } catch(SQLException e) {
             throw new DAOFactoryException("Failed to establish connection to the database server.");
         }
-        
     }
     
     /**

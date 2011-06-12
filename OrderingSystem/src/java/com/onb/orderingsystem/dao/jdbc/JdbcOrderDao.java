@@ -24,7 +24,7 @@ public class JdbcOrderDao extends AbstractDao implements OrderDao {
      * @param connection
      * @throws IllegalArgumentException 
      */
-    public JdbcOrderDao(Connection connection) throws IllegalArgumentException {
+    JdbcOrderDao(Connection connection) throws IllegalArgumentException {
         super(connection);
     }
 

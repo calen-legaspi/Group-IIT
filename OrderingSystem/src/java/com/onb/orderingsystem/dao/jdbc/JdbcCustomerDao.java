@@ -9,7 +9,6 @@ import com.onb.orderingsystem.domain.Order;
 import com.onb.orderingsystem.domain.OrderItem;
 import com.onb.orderingsystem.domain.OrderStatus;
 import com.onb.orderingsystem.domain.Product;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,8 +16,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Implementation of the CustomerDao interface.
@@ -28,11 +25,13 @@ import java.util.logging.Logger;
 public class JdbcCustomerDao extends AbstractDao implements CustomerDao {
     
     /**
+     * Do not access this directly. Use JdbcDAOFactory for that purpose.
+     * @see JdbcDAOFactory use this to acquire an instance.
      * @see java.sql.Connection
      * @param connection 
      * @throws IllegalArgumentException if the connection is null.
      */
-    public JdbcCustomerDao(Connection connection) throws IllegalArgumentException {
+    JdbcCustomerDao(Connection connection) throws IllegalArgumentException {
         super(connection);
     }
 
