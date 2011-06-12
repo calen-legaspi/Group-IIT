@@ -4,14 +4,21 @@ import com.onb.orderingsystem.dao.AbstractDao;
 import com.onb.orderingsystem.dao.CustomerDao;
 import com.onb.orderingsystem.dao.DaoException;
 import com.onb.orderingsystem.domain.Customer;
+import com.onb.orderingsystem.domain.DiscountStatus;
 import com.onb.orderingsystem.domain.Order;
 import com.onb.orderingsystem.domain.OrderItem;
+import com.onb.orderingsystem.domain.OrderStatus;
+import com.onb.orderingsystem.domain.Product;
+import java.math.BigDecimal;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Implementation of the CustomerDao interface.
@@ -80,27 +87,58 @@ public class JdbcCustomerDao extends AbstractDao implements CustomerDao {
         try {
             Statement select = connection.createStatement();
             ResultSet result = select.executeQuery(customerQueryAll);
-            while(!result.isAfterLast()) {
-                Customer c = new Customer(result.getInt("id"), result.getNString("name"), new LinkedHashSet<Order>());
+            while(result.next()) {
+                Customer c = new Customer(result.getInt("id"), result.getString("name"), new LinkedHashSet<Order>());
+                restoreOrdersForCustomer(c);
                 allCustomers.add(c);
             }
         } catch (SQLException e) {
-            throw new DaoException("Query failed.");
+            throw new DaoException("Query["+customerQueryAll+"] failed:"+e.getMessage());
         }
         
         return allCustomers;
     }
     
-    private void restoreOrdersForCustomer(Customer c) {
+    //restores the order objects for the specified customer
+    private void restoreOrdersForCustomer(Customer c) throws DaoException {
+        String orderQueryAllForCustomer = "SELECT * FROM orders WHERE customer_id = ?";
         
+        try {
+            PreparedStatement select = connection.prepareStatement(orderQueryAllForCustomer);
+            select.setInt(1, c.getId());
+            ResultSet result = select.executeQuery();
+            while(result.next()) {
+                Order o = new Order(result.getInt("order_number"), result.getDate("date"), new LinkedHashSet<OrderItem>(), OrderStatus.fromString(result.getString("order_status")), DiscountStatus.fromString(result.getString("discount_status")), result.getBigDecimal("amount"));
+                restoreOrderItemsForOrder(o);
+                c.addOrder(o);
+            }
+        } catch (SQLException e) {
+            throw new DaoException("Query ["+orderQueryAllForCustomer+"] failed:"+e.getMessage());
+        }
     }
     
-    private void restoreOrderItemsForOrder(Order o) {
+    //restores the order items for the specified order
+    private void restoreOrderItemsForOrder(Order o) throws DaoException {
+        String orderItemQueryForOrder = "SELECT * FROM order_items WHERE order_order_number = ?";
         
+        try {
+            PreparedStatement select = connection.prepareStatement(orderItemQueryForOrder);
+            select.setInt(1, o.getOrderNumber());
+            ResultSet result = select.executeQuery();
+            while(result.next()) {
+                OrderItem oi = new OrderItem(result.getInt("id"), new Product("Temp", BigDecimal.ONE), result.getInt("quantity"));
+                restoreProductForOrderItems(oi);
+                o.addOrderItem(oi);
+            }
+        } catch (SQLException e) {
+            throw new DaoException("Query ["+orderItemQueryForOrder+"] failed:"+e.getMessage());
+        }
     }
     
+    //restores the product for the specified orderitem
     private void restoreProductForOrderItems(OrderItem oi) {
-        
+        String productQueryForOrderItem = "SELECT * FROM products WHERE sku_number = ?";
+        //TODO: finish this up
     }
     
 }

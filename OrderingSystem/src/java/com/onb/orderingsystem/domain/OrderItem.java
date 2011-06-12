@@ -131,4 +131,13 @@ public class OrderItem implements Serializable {
         }
         return order;
     }
+    
+    /**
+     * Sets the product contained in this OrderItem.
+     * @param product the product to replace the current product.
+     * @throws IllegalArgumentException if the parameter is null.
+     */
+    public void setProduct(Product product) throws IllegalArgumentException {
+        this.product = product;
+    }
 }

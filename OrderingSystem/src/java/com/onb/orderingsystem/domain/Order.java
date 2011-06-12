@@ -232,4 +232,13 @@ public class Order implements Serializable {
         }
         return customer;
     }
+    
+    /**
+     * The human readable form of the Order
+     * @return 
+     */
+    @Override
+    public String toString() {
+        return "#"+orderNumber+" Amount: "+amount;
+    }
 }
