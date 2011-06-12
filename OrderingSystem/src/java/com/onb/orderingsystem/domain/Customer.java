@@ -177,4 +177,12 @@ public class Customer implements Serializable {
         }
         return paidOrderAmount;
     }
+    
+    /**
+     * Checks if this customer has not yet reached his credit limit.
+     * @return true if the customer has not yet exceeded his credit limit, otherwise false.
+     */
+    public boolean isCreditLimitNotExceeded() {
+        return getCreditLimit().compareTo(getAmountOfUnpaidOrders()) > 0;
+    }
 }
