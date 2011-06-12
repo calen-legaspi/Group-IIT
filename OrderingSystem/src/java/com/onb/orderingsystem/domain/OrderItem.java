@@ -140,4 +140,13 @@ public class OrderItem implements Serializable {
     public void setProduct(Product product) throws IllegalArgumentException {
         this.product = product;
     }
+    
+    /**
+     * Returns a human-readable form of the Order Item.
+     * @return a string representation of the Order Item.
+     */
+    @Override
+    public String toString() {
+        return product.toString()+" Qty:"+quantity;
+    }
 }

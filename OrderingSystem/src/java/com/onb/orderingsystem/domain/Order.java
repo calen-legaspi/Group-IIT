@@ -239,6 +239,6 @@ public class Order implements Serializable {
      */
     @Override
     public String toString() {
-        return "#"+orderNumber+" Amount: "+amount;
+        return date+"#"+orderNumber+" Amount: "+amount;
     }
 }

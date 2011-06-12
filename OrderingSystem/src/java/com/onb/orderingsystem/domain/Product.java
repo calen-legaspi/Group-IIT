@@ -112,4 +112,13 @@ public class Product implements Serializable {
         hashCode += getSkuNumber();
         return hashCode;
     }
+    
+    /**
+     * String representation of the product.
+     * @return the string representation of the product.
+     */
+    @Override
+    public String toString() {
+        return "sku#"+skuNumber+" ["+name+"] Amount: "+amount;
+    }
 }
