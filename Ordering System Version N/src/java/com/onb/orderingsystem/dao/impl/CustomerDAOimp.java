@@ -52,6 +52,26 @@ public class CustomerDAOimp implements CustomerDAO{
             throw new RuntimeException("Failed to get unpaid customers", e);
 	}
     }
+    
+    @Override
+    public Set<Customer> getAllCustomers(){
+        try{
+            Set<Customer> customers = new HashSet<Customer>();
+            Connection conn = myFactory.getConnection();
+            String sql = "select * from customers order by name";
+            PreparedStatement statement = conn.prepareStatement(sql);
+            ResultSet rs = statement.executeQuery();
+   
+            while(rs.next()){ 
+                customers.add(toCustomer(rs));
+            }
+           
+            return customers;
+        }
+	catch (SQLException e) {
+            throw new RuntimeException("Failed to get unpaid customers", e);
+	}
+    }
 
     private Customer toCustomer(ResultSet rs) throws SQLException {
 		int id = rs.getInt("id");

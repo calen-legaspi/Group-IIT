@@ -23,4 +23,9 @@ public class CustomerService {
         CustomerDAO dao =new CustomerDAOimp();
         return dao.getAllUnpaid();
     }
+    
+    public Set<Customer> getAllCustomers(){
+        CustomerDAO dao = new CustomerDAOimp();
+        return dao.getAllCustomers();
+    }
 }

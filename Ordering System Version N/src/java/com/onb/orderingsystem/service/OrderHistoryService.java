@@ -3,8 +3,6 @@
  * and open the template in the editor.
  */
 package com.onb.orderingsystem.service;
-import com.onb.orderingsystem.dao.*;
-import com.onb.orderingsystem.dao.impl.CustomerDAOimp;
 import com.onb.orderingsystem.dao.impl.OrderDAOImp;
 import com.onb.orderingsystem.domain.*;
 import java.util.Set;
