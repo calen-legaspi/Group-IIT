@@ -6,6 +6,7 @@ import java.util.Set;
 public interface CustomerDAO {
     
     public Customer findById(int id);
+    public Set<Customer> getAllCustomers();
     public Set<Customer> getAllUnpaid();
     
     

@@ -15,5 +15,8 @@ import java.util.Set;
 public interface OrderDAO {
     
     public Set<Order> getCustomerOrders(Customer customer);
+    public void payCustomerOrder(int order_id);
     public Set<Order> getCustomerUnpaidOrders(Customer customer);
+
+    public int getCustomerIdAssocWithOrder(int order_number);
 }

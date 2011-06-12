@@ -7,7 +7,6 @@
 <%@page import="java.util.HashSet"%>
 <%@page import="com.onb.orderingsystem.domain.Customer"%>
 <%@page import="java.util.Set"%>
-<%@page import="com.onb.orderingsystem.service.CustomerService"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
    Set<Customer> listOfCustomers = (HashSet<Customer>) request.getAttribute("ListOfCustomers");
@@ -18,6 +17,7 @@
 <title>Ordering System | List of Unpaid Customers</title>
 </head>
 <body>
+    <a href="index.jsp">Back to Home</a>
 <h3>Customers With Unpaid Orders</h3>
 <table>
 <tr>

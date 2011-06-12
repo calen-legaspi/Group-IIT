@@ -14,6 +14,7 @@
     <body>
         <h3>Ordering System</h3>
         <h4>Select Operation:</h4>
+        <a href="Customers">View All Customers</a><br/>
         <a href="UnpaidCustomers">View Customers With Unpaid Orders</a>
     </body>
 </html>
