@@ -65,7 +65,9 @@ public class JdbcInventoryItemDao extends AbstractDao implements InventoryItemDa
      */
     @Override
     public void updateInventoryItem(InventoryItem inventoryItem) throws DaoException, IllegalArgumentException {
-        throw new UnsupportedOperationException("Not supported yet.");
+        String updateInventoryItem = "UPDATE inventory_items SET product_sku_number = ?, inventory_id = ? ,quantity = ? WHERE id = ?";
+        
+        
     }
     
 }

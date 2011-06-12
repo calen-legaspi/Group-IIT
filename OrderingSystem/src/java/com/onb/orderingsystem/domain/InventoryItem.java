@@ -101,4 +101,12 @@ public class InventoryItem implements Serializable {
     public int hashCode() {
         return product.hashCode();
     }
+    
+    /**
+     * 
+     * @return 
+     */
+    public String toString() {
+        return product.toString()+" Qty:"+quantity;
+    }
 }

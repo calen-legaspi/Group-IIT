@@ -8,6 +8,8 @@ import com.onb.orderingsystem.domain.Order;
 import com.onb.orderingsystem.dao.DaoException;
 import com.onb.orderingsystem.domain.Customer;
 import com.onb.orderingsystem.dao.CustomerDao;
+import com.onb.orderingsystem.dao.InventoryItemDao;
+import com.onb.orderingsystem.domain.InventoryItem;
 import com.onb.orderingsystem.domain.OrderItem;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -40,7 +42,13 @@ public class JdbcCustomerDaoTest {
     }
     
     @Test
-    public void testInventoryItemsAll() {
+    public void testInventoryItemsAll() throws DaoException, SQLException {
+        Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/orderingsystem_test", "root", "password");
         
+        InventoryItemDao id = new JdbcInventoryItemDao(con);
+        
+        Set<InventoryItem> availableInv = id.getAvailableInventoryItems();
+        
+        System.out.println(availableInv);
     }
 }
