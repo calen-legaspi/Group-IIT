@@ -15,6 +15,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Implementation of the InventoryItemDao interface.
@@ -65,9 +67,16 @@ public class JdbcInventoryItemDao extends AbstractDao implements InventoryItemDa
      */
     @Override
     public void updateInventoryItem(InventoryItem inventoryItem) throws DaoException, IllegalArgumentException {
-        String updateInventoryItem = "UPDATE inventory_items SET product_sku_number = ?, inventory_id = ? ,quantity = ? WHERE id = ?";
-        
-        
+        String updateInventoryItem = "UPDATE inventory_items SET product_sku_number = ?,quantity = ? WHERE id = ?";
+        try {
+            PreparedStatement update = connection.prepareStatement(updateInventoryItem);
+            update.setInt(1, inventoryItem.getProduct().getSkuNumber());
+            update.setInt(2, inventoryItem.getQuantity());
+            update.setInt(3, inventoryItem.getId());
+            update.executeUpdate();
+        } catch (SQLException e) {
+            throw new DaoException("Query ["+updateInventoryItem+"] failed:"+e.getMessage());
+        }
     }
     
 }

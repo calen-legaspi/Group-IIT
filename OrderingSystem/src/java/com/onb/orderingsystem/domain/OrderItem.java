@@ -149,4 +149,12 @@ public class OrderItem implements Serializable {
     public String toString() {
         return product.toString()+" Qty:"+quantity;
     }
+    
+    /**
+     * 
+     * @return 
+     */
+    public Product getProduct() {
+        return product;
+    }
 }
