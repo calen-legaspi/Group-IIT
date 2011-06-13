@@ -18,9 +18,8 @@ import org.junit.Test;
 public class CustomerDaoTest extends DBTestCase {
 
     public static final String INITIAL_DATABASE = "test/com/onb/orderingsystem/dao/jdbc/CustomerDaoTest.xml";
-    
     private CustomerDao customerDao;
-    
+
     public CustomerDaoTest(String name) throws Exception {
         super(name);
         System.setProperty(PropertiesBasedJdbcDatabaseTester.DBUNIT_DRIVER_CLASS, "com.mysql.jdbc.Driver");
@@ -43,23 +42,23 @@ public class CustomerDaoTest extends DBTestCase {
 
     @Test
     public void testGetCustomersCreditLimitNotExceeded() throws DaoException {
-        Set<Customer> customersWithCreditLimitNotExceeded = new LinkedHashSet<Customer>(); 
+        Set<Customer> customersWithCreditLimitNotExceeded = new LinkedHashSet<Customer>();
         customersWithCreditLimitNotExceeded = customerDao.getCustomersCreditLimitNotExceeded();
-        
+
         int actualCount = customersWithCreditLimitNotExceeded.size();
         int expectedCount = 5;
-        
+
         assertEquals(expectedCount, actualCount);
     }
-    
+
     @Test
     public void testGetCustomersWithUnpaidOrders() throws DaoException {
-        Set<Customer> customersWithUnpaidOrders = new LinkedHashSet<Customer>(); 
+        Set<Customer> customersWithUnpaidOrders = new LinkedHashSet<Customer>();
         customersWithUnpaidOrders = customerDao.getCustomersWithUnpaidOrders();
-        
+
         int actualCount = customersWithUnpaidOrders.size();
         int expectedCount = 4;
-        
+
         assertEquals(expectedCount, actualCount);
     }
 }
