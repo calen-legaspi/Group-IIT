@@ -8,11 +8,14 @@ import com.onb.orderingsystem.dao.OrderDao;
 import com.onb.orderingsystem.dao.jdbc.JdbcDAOFactory;
 import com.onb.orderingsystem.domain.Customer;
 import com.onb.orderingsystem.domain.Order;
+import com.onb.orderingsystem.domain.OrderStatus;
 import com.onb.orderingsystem.service.PaymentService;
 import com.onb.orderingsystem.service.ServiceException;
 import com.onb.orderingsystem.util.ApplicationEnvironment;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -46,14 +49,23 @@ public class PaymentServiceImpl implements PaymentService {
     public Set<Order> getUnpaidOrders(Customer customer) throws ServiceException, IllegalArgumentException {
         Set<Order> unpaidOrders = new LinkedHashSet<Order>();
         
-        //TODO: get all unpaid orders of the customer
+        for(Order o: customer.getOrders()) {
+            if(o.getOrderStatus() == OrderStatus.UNPAID) {
+                unpaidOrders.add(o);
+            }
+        }
         
         return unpaidOrders;
     }
 
     @Override
     public void payFor(Order order) throws ServiceException, IllegalArgumentException {
-        //TODO: payment logic here...just update the darn thing
+        order.setOrderStatus(OrderStatus.PAID);
+        try {
+            orderDao.updateOrder(order);
+        } catch (DaoException ex) {
+            throw new ServiceException("Something went very wrong!");
+        }
     }
     
 }

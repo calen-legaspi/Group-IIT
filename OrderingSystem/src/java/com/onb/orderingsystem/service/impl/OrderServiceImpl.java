@@ -6,10 +6,12 @@ import com.onb.orderingsystem.dao.DAOFactoryException;
 import com.onb.orderingsystem.dao.DaoException;
 import com.onb.orderingsystem.dao.InventoryItemDao;
 import com.onb.orderingsystem.dao.OrderDao;
+import com.onb.orderingsystem.dao.OrderItemDao;
 import com.onb.orderingsystem.dao.jdbc.JdbcDAOFactory;
 import com.onb.orderingsystem.domain.Customer;
 import com.onb.orderingsystem.domain.InventoryItem;
 import com.onb.orderingsystem.domain.Order;
+import com.onb.orderingsystem.domain.OrderItem;
 import com.onb.orderingsystem.service.OrderService;
 import com.onb.orderingsystem.service.ServiceException;
 import com.onb.orderingsystem.util.ApplicationEnvironment;
@@ -24,6 +26,7 @@ public class OrderServiceImpl implements OrderService {
     private DAOFactory daoFactory;
     private CustomerDao customerDao;
     private OrderDao orderDao;
+    private OrderItemDao orderItemDao;
     private InventoryItemDao inventoryItemDao;
     
     /**
@@ -34,6 +37,7 @@ public class OrderServiceImpl implements OrderService {
         daoFactory = JdbcDAOFactory.getInstance(ApplicationEnvironment.PRODUCTION);
         customerDao = daoFactory.getCustomerDao();
         orderDao = daoFactory.getOrderDao();
+        orderItemDao = daoFactory.getOrderItemDao();
         inventoryItemDao = daoFactory.getInventoryItemDao();
     }
 
@@ -84,8 +88,16 @@ public class OrderServiceImpl implements OrderService {
      */
     @Override
     public void createOrder(Order order, Customer customer) throws ServiceException, IllegalArgumentException {
-        //TODO: evaluate if the new order is valid.
-        
+        try {
+            //check for available supplies and throw an InsufficientSupplyException
+            orderDao.createOrder(order);
+            for(OrderItem o: order.getOrderItems()) {
+                orderItemDao.createOrderItem(o);
+            }
+            //check if the customer has not broken its credit limit else throw a CreditLimitExceededException
+        } catch (DaoException e) {
+            throw new ServiceException("");
+        }
     }
     
 }
