@@ -66,6 +66,7 @@ public class JdbcCustomerDao extends AbstractDao implements CustomerDao {
         
         for(Customer c:allCustomers) {
             if(c.hasUnpaidOrders()) {
+                System.out.println(c.getAmountOfUnpaidOrders());
                 customersWithUnpaidOrders.add(c);
             }
         }
