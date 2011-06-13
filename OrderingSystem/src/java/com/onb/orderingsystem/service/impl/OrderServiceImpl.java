@@ -27,8 +27,8 @@ public class OrderServiceImpl implements OrderService {
     private InventoryItemDao inventoryItemDao;
     
     /**
-     * 
-     * @throws DAOFactoryException 
+     * Creates a new instance of an OrderServiceImpl.
+     * @throws DAOFactoryException if the database connection failed to open
      */
     public OrderServiceImpl() throws DAOFactoryException {
         daoFactory = JdbcDAOFactory.getInstance(ApplicationEnvironment.PRODUCTION);
@@ -38,9 +38,10 @@ public class OrderServiceImpl implements OrderService {
     }
 
     /**
-     * 
-     * @return
-     * @throws ServiceException 
+     * Retrieves the set of all available customers.
+     * Available customers refers to customers who have not exceeded their credit limit.
+     * @return the Set of customers who have not exceeded their credit limit.
+     * @throws ServiceException if something goes wrong while retrieving the Set.
      */
     @Override
     public Set<Customer> getAvailableCustomers() throws ServiceException {
@@ -56,7 +57,8 @@ public class OrderServiceImpl implements OrderService {
     }
 
     /**
-     * 
+     * Retrieves the Set of available InventoryItems.
+     * Available InventoryItems refer to InventoryItems whose 
      * @return
      * @throws ServiceException 
      */
