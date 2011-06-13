@@ -1,6 +1,5 @@
 package com.onb.orderingsystem.domain;
 
-import com.onb.orderingsystem.util.ApplicationEnvironment;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.LinkedHashSet;

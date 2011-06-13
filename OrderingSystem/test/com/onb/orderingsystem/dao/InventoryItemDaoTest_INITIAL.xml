@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <customers id="1" name="Customer 1"/>
+  <customers id="2" name="Customer 2"/>
+  <orders order_number="1" customer_id="1" date="2011-06-13" amount="20.00" order_status="PAID" discount_status="NO_DISCOUNT" />
+</dataset>
