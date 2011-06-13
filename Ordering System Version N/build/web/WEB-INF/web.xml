@@ -16,6 +16,18 @@
         <servlet-name>UnpaidOrdersList</servlet-name>
         <jsp-file>/WEB-INF/UnpaidOrdersByCustomer.jsp</jsp-file>
     </servlet>
+    <servlet>
+        <servlet-name>PayOrder</servlet-name>
+        <servlet-class>com.onb.orderingsystem.servlet.ProcessUnpaidOrder</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetAllCustomers</servlet-name>
+        <servlet-class>com.onb.orderingsystem.servlet.GetAllCustomers</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AllCustomersList</servlet-name>
+        <jsp-file>/WEB-INF/AllCustomersList.jsp</jsp-file>
+    </servlet>
     <servlet-mapping>
         <servlet-name>GetUnpaidCustomers</servlet-name>
         <url-pattern>/UnpaidCustomers</url-pattern>
@@ -31,6 +43,18 @@
     <servlet-mapping>
         <servlet-name>UnpaidOrdersList</servlet-name>
         <url-pattern>/UnpaidOrdersList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PayOrder</servlet-name>
+        <url-pattern>/PayOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetAllCustomers</servlet-name>
+        <url-pattern>/Customers</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AllCustomersList</servlet-name>
+        <url-pattern>/AllCustomersList</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
