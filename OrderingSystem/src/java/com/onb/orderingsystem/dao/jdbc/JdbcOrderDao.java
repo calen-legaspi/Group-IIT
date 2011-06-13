@@ -13,7 +13,6 @@ import com.onb.orderingsystem.domain.Order;
 import com.onb.orderingsystem.domain.OrderItem;
 import com.onb.orderingsystem.domain.OrderStatus;
 import com.onb.orderingsystem.domain.Product;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -22,8 +21,6 @@ import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Implementation of the OrderDao interface.
