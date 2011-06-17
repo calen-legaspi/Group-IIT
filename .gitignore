@@ -9,10 +9,5 @@
 *.netbeans_update_resources
 *.eap
 *build.xml
-Ordering System Version N/build/
-Ordering System Version N/nbproject/
-OrderingSystem/build/
-OrderingSystem/dist/
-OrderingSystem/nbproject/
 Basurahan
 
