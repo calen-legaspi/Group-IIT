@@ -56,13 +56,8 @@ public class Order implements Serializable {
 	 * @param amount
 	 *            the computed amount after a discount has been applied. A field
 	 *            is necessary to avoid the price fluctuation discrepancy.
-	 * @throws IllegalArgumentException
-	 *             Throws this exception when one of the argument has an illegal
-	 *             value.
 	 */
-	public Order(int orderumber, Date date, Set<OrderItem> orderItems,
-			OrderStatus orderStatus, DiscountStatus discountStatus,
-			BigDecimal amount) throws IllegalArgumentException {
+	public Order(int orderumber, Date date, Set<OrderItem> orderItems, OrderStatus orderStatus, DiscountStatus discountStatus, BigDecimal amount) {
 		this();
 		this.orderNumber = orderumber;
 		this.date = date;
@@ -77,12 +72,10 @@ public class Order implements Serializable {
 	 * Sets the order date to the date parameter.
 	 * 
 	 * @param date
-	 * @throws IllegalArgumentException
-	 *             Throws this exception when the parameter is null.
 	 */
-	public void setDate(Date date) throws IllegalArgumentException {
+	public void setDate(Date date) {
 		if (date == null) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Date is null.");
 		}
 		this.date = date;
 	}
@@ -96,8 +89,7 @@ public class Order implements Serializable {
 	 *             Throws this exception when the transition from one state to
 	 *             the next is prohibited.
 	 */
-	public void setOrderStatus(OrderStatus orderStatus)
-			throws IllegalStateException {
+	public void setOrderStatus(OrderStatus orderStatus) throws IllegalStateException {
 		if (this.orderStatus == OrderStatus.PROCESSING
 				&& orderStatus == OrderStatus.UNPAID) {
 			this.orderStatus = orderStatus;
@@ -131,14 +123,8 @@ public class Order implements Serializable {
 	 * 
 	 * @param orderItem
 	 *            The OrderItem to add to the Order
-	 * @throws IllegalArgumentException
-	 *             Throws this exception when the argument is null.
-	 * @throws IllegalStateException
-	 *             Throws this exception when the orderStatus is not
-	 *             "PROCESSING".
 	 */
-	public void addOrderItem(OrderItem orderItem)
-			throws IllegalArgumentException, IllegalStateException {
+	public void addOrderItem(OrderItem orderItem) {
 		if (orderItem == null) {
 			throw new IllegalArgumentException("OrderItem cannot be null.");
 		}
@@ -159,8 +145,6 @@ public class Order implements Serializable {
 		updateAmount();
 	}
 
-	// updates the total amount field during changes (works only in the
-	// PROCESSING state
 	private void updateAmount() throws IllegalStateException {
 		if (this.orderStatus != OrderStatus.PROCESSING) {
 			return;
@@ -182,21 +166,13 @@ public class Order implements Serializable {
 	 * "PROCESSING".
 	 * 
 	 * @param orderItem
-	 * @throws IllegalArgumentException
-	 *             Throws this exception when the argument is null or does not
-	 *             exist in the Order.
-	 * @throws IllegalStateException
-	 *             Throws this exception when the orderStatus is not
-	 *             "PROCESSING".
 	 */
-	public void removeOrder(OrderItem orderItem)
-			throws IllegalArgumentException, IllegalStateException {
+	public void removeOrder(OrderItem orderItem) {
 		if (orderItem == null) {
 			throw new IllegalArgumentException("Parameter orderItem is null.");
 		}
 		if (orderStatus != OrderStatus.PROCESSING) {
-			throw new IllegalStateException(
-					"Edit lock: You cannot modify the contents of the Order items.");
+			throw new IllegalStateException("You cannot modify the contents of the Order items at this state.");
 		}
 		this.orderItems.remove(orderItem);
 		updateAmount();
@@ -253,17 +229,13 @@ public class Order implements Serializable {
 	/**
 	 * 
 	 * @param customer
-	 * @throws IllegalArgumentException
-	 * @throws IllegalStateException
 	 */
-	public void setCustomer(Customer customer) throws IllegalArgumentException,
-			IllegalStateException {
+	public void setCustomer(Customer customer) {
 		if (customer == null) {
 			throw new IllegalArgumentException("Customer cant be null.");
 		}
 		if (orderStatus != OrderStatus.PROCESSING) {
-			throw new IllegalStateException(
-					"Customer cannot be modified at this state.");
+			throw new IllegalStateException( "Customer cannot be modified at this state." );
 		}
 		this.customer = customer;
 	}
@@ -272,10 +244,8 @@ public class Order implements Serializable {
 	 * Gets the customer reference.
 	 * 
 	 * @return the customer who ordered this order.
-	 * @throws NullPointerException
-	 *             if the customer was not yet set.
 	 */
-	public Customer getCustomer() throws NullPointerException {
+	public Customer getCustomer() {
 		if (customer == null) {
 			throw new NullPointerException("The customer was not yet set.");
 		}

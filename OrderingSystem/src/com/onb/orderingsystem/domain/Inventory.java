@@ -53,8 +53,7 @@ public class Inventory implements Serializable {
 	 * @exception IllegalArgumentException
 	 *                Throws this exception when the parameter is null.
 	 */
-	public void addInventoryItem(InventoryItem inventoryItem)
-			throws IllegalArgumentException {
+	public void addInventoryItem(InventoryItem inventoryItem) throws IllegalArgumentException {
 		if (inventoryItem == null) {
 			throw new IllegalArgumentException("Parameter cant be null.");
 		}

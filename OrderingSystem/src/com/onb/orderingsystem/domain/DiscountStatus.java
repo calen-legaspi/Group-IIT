@@ -46,14 +46,12 @@ public enum DiscountStatus {
 	 * @return
 	 * @throws IllegalArgumentException
 	 */
-	public static DiscountStatus fromString(String stringForm)
-			throws IllegalArgumentException {
+	public static DiscountStatus fromString(String stringForm) throws IllegalArgumentException {
 		for (DiscountStatus s : DiscountStatus.values()) {
 			if (s.toString().equals(stringForm)) {
 				return s;
 			}
 		}
-		throw new IllegalArgumentException("DiscountStatus \"" + stringForm
-				+ "\" does not exist.");
+		throw new IllegalArgumentException("DiscountStatus \"" + stringForm + "\" does not exist.");
 	}
 }

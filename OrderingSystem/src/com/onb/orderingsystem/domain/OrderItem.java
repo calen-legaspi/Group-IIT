@@ -19,13 +19,10 @@ public class OrderItem implements Serializable {
 	/**
 	 * @param product
 	 * @param quantity
-	 * @throws IllegalArgumentException
-	 *             Throws this exception when the product parameter is null.
 	 */
-	public OrderItem(Product product, int quantity)
-			throws IllegalArgumentException {
+	public OrderItem(Product product, int quantity) {
 		if (product == null) {
-			throw new IllegalArgumentException("The product cant be null.");
+			throw new IllegalArgumentException("The product can't be null.");
 		}
 		this.product = product;
 		this.quantity = quantity;
@@ -40,11 +37,8 @@ public class OrderItem implements Serializable {
 	 *            database.
 	 * @param product
 	 * @param quantity
-	 * @throws IllegalArgumentException
-	 *             if the product is null.
 	 */
-	public OrderItem(int id, Product product, int quantity)
-			throws IllegalArgumentException {
+	public OrderItem(int id, Product product, int quantity) {
 		this(product, quantity);
 		this.id = id;
 	}
@@ -58,13 +52,10 @@ public class OrderItem implements Serializable {
 	 * 
 	 * @param quantity
 	 *            The new quantity of the ordered item.
-	 * @throws IllegalArgumentException
-	 *             Throws this exception when the argument is less than zero.
 	 */
-	public void setQuantity(int quantity) throws IllegalArgumentException {
+	public void setQuantity(int quantity) {
 		if (quantity < 0) {
-			throw new IllegalArgumentException(
-					"Quantity cant be less than zero.");
+			throw new IllegalArgumentException("Quantity cant be less than zero.");
 		}
 		this.quantity = quantity;
 	}

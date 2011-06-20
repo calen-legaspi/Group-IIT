@@ -29,11 +29,8 @@ public class Customer implements Serializable {
 	 * 
 	 * @param name
 	 *            The name of the customer.
-	 * @throws IllegalArgumentException
-	 *             if at least one of the argument has invalid values such as
-	 *             null.
 	 */
-	public Customer(String name) throws IllegalArgumentException {
+	public Customer(String name) {
 		if (name == null || name.equals("")) {
 			throw new IllegalArgumentException("Name cannot be null or empty.");
 		}
@@ -50,12 +47,8 @@ public class Customer implements Serializable {
 	 *            The full name of the Customer.
 	 * @param orders
 	 *            The Set of Orders owned by the Customer.
-	 * @throws IllegalArgumentException
-	 *             if at least one of the argument is contains an illegal value
-	 *             such as null.
 	 */
-	public Customer(int id, String name, Set<Order> orders)
-			throws IllegalArgumentException {
+	public Customer(int id, String name, Set<Order> orders) {
 		this(name);
 		if (name == null || orders == null) {
 			throw new IllegalArgumentException("One of the parameter is null.");
@@ -122,8 +115,7 @@ public class Customer implements Serializable {
 			throw new IllegalArgumentException("The customer cannot be null.");
 		}
 		if (!(o instanceof Customer)) {
-			throw new IllegalArgumentException(
-					"Customers can only be compared to other Customers.");
+			throw new IllegalArgumentException("Customers can only be compared to other Customers.");
 		}
 		return ((Customer) o).id == id;
 	}
@@ -168,6 +160,7 @@ public class Customer implements Serializable {
 	 */
 	public BigDecimal getCreditLimit() {
 		BigDecimal paidAmount = BigDecimal.ZERO;
+		
 		for (Order o : orders) {
 			if (o.getOrderStatus() == OrderStatus.PAID) {
 				paidAmount = paidAmount.add(o.getAmount());
@@ -249,6 +242,11 @@ public class Customer implements Serializable {
 		return unsortedOrderList;
 	}
 	
+	/**
+	 * 
+	 * @param toTest
+	 * @return
+	 */
 	public boolean checkOrderIfAllowed(Order toTest) {
 		return toTest.getAmount().compareTo(getRemainingCredits()) <= 0;
 	}
