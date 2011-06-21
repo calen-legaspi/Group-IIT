@@ -80,9 +80,24 @@ public class Inventory implements Serializable {
 	 * 
 	 * @param order
 	 * @return true if the inventory has enough items to supply the order.
+	 * @throws DomainException 
 	 */
-	public boolean isAvailableForOrder(Order order) {
-		throw new UnsupportedOperationException();
+	public boolean isAvailableForOrder(Order order) throws DomainException {
+		for(OrderItem orderItem: order.getOrderItems()) {
+			boolean foundAndAvailable = false;
+			
+			for(InventoryItem inventoryItem: inventoryItems) {
+				//check the quantity if and only if they are made of the same product
+				if(inventoryItem.isSameProduct(orderItem) && inventoryItem.isAvailable(orderItem)) {
+					foundAndAvailable = true;
+				}
+			}
+			
+			if(!foundAndAvailable) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	/**
@@ -94,7 +109,16 @@ public class Inventory implements Serializable {
 	 *             if the order exceeds the amount available in the inventory
 	 */
 	public void removeItemsFromInventory(Order order) throws DomainException {
-		throw new UnsupportedOperationException();
+		if(!isAvailableForOrder(order)) {
+			throw new DomainException("Some items are not available for order.");
+		}
+		for(OrderItem orderItem: order.getOrderItems()) {
+			for(InventoryItem inventoryItem: inventoryItems) {
+				if(inventoryItem.isSameProduct(orderItem) && inventoryItem.isAvailable(orderItem)) {
+					inventoryItem.removeQuantityByOrderItem(orderItem);
+				}
+			}
+		}
 	}
 
 	/**

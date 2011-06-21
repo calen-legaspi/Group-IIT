@@ -6,4 +6,6 @@ public interface InventoryDao {
 	
 	public Inventory getInventory();
 	
+	public void updateInventory(Inventory inventory);
+	
 }

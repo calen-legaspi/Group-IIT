@@ -18,13 +18,13 @@ public class OrderTest {
         /*
          * Setup a normal order amounting to 10,000
          */
-        normalOrder = new Order();
+        normalOrder = new Order(1);
         normalOrder.addOrderItem(new OrderItem(1, p, 1));
         
         /*
          * Setup a discounted (10%) order from 10,000 (expecting 9,000)
          */
-        discountedOrder = new Order();
+        discountedOrder = new Order(2);
         discountedOrder.addOrderItem(new OrderItem(2, p, 1));
         discountedOrder.setDiscountStatus(DiscountStatus.TEN_PERCENT);
         
@@ -32,7 +32,7 @@ public class OrderTest {
          * Order the same product twice. 
          * Quantity should be added instead of creating a new entry.
          */
-        orderWithConsolidation = new Order();
+        orderWithConsolidation = new Order(3);
         orderWithConsolidation.addOrderItem(new OrderItem(p, 10));
         orderWithConsolidation.addOrderItem(new OrderItem(p, 20));
     }

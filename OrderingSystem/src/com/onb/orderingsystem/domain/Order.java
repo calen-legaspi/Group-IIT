@@ -25,21 +25,14 @@ public class Order implements Serializable {
 	 */
 	private BigDecimal amount = BigDecimal.ZERO;
 	
+	/**
+	 * Creates a new instance of an order.
+	 * @param orderNumber the unique identifier of the order.
+	 */
 	public Order(int orderNumber) {
-		this();
 		this.orderNumber = orderNumber;
 	}
-
-	/**
-	 * A constructor that creates a new Order instance. Sets the date field to
-	 * the current date and the OrderStatus to "PROCESSING".
-	 * 
-	 * @param orderNumber
-	 *            Should be unique, equality checks are based on this.
-	 */
-	public Order() {
-	}
-
+	
 	/**
 	 * A constructor to reconstruct an instance from the database (probably).
 	 * 
@@ -58,8 +51,7 @@ public class Order implements Serializable {
 	 *            is necessary to avoid the price fluctuation discrepancy.
 	 */
 	public Order(int orderumber, Date date, Set<OrderItem> orderItems, OrderStatus orderStatus, DiscountStatus discountStatus, BigDecimal amount) {
-		this();
-		this.orderNumber = orderumber;
+		this(orderumber);
 		this.date = date;
 		this.orderItems = orderItems;
 		this.orderStatus = orderStatus;

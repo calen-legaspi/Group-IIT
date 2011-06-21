@@ -121,18 +121,34 @@ public class InventoryItem implements Serializable {
 	/**
 	 * 
 	 * @param orderItem
+	 * @throws DomainException if the product compared against this is not equals.
 	 * @return
 	 */
-	public boolean isAvailable(OrderItem orderItem) {
-		throw new UnsupportedOperationException();
+	public boolean isAvailable(OrderItem orderItem) throws DomainException {
+		if(!isSameProduct(orderItem)) {
+			throw new DomainException("Product "+orderItem.getProduct()+" cannot be compared to "+product);
+		}
+		return quantity >= orderItem.getQuantity();
+	}
+	
+	/**
+	 * 
+	 * @param orderItem
+	 * @return
+	 */
+	public boolean isSameProduct(OrderItem orderItem) {
+		return orderItem.getProduct().equals(product);
 	}
 
 	/**
 	 * 
 	 * @param orderItem
-	 * @throws DomainException
+	 * @throws DomainException if the attempted quantity deduction results to a negative quantity.
 	 */
 	public void removeQuantityByOrderItem(OrderItem orderItem) throws DomainException {
-		throw new UnsupportedOperationException();
+		if(!isAvailable(orderItem)) {
+			throw new DomainException("Insufficient supply of "+orderItem.getProduct()+" requested "+orderItem.getQuantity()+" but available is "+quantity);
+		}
+		quantity -= orderItem.getQuantity();
 	}
 }

@@ -3,6 +3,8 @@ package com.onb.orderingsystem.domain;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,6 +18,8 @@ public class CustomerTest {
     private Set<Order> creditLimit30000;
     private Set<Order> creditLimit75000;
     private Set<Order> creditLimit150000;
+    private Set<Order> ordersWithDifferentDate;
+    private List<Order> ordersSortedByDate;
     
     @Before
     public void setUp() {
@@ -74,6 +78,26 @@ public class CustomerTest {
         Order orderPaid1100000 = new Order(5, new Date(), orderItems11000000, OrderStatus.PAID, DiscountStatus.NO_DISCOUNT, new BigDecimal("1100000.00"));
         creditLimit150000 = new LinkedHashSet<Order>();
         creditLimit150000.add(orderPaid1100000);
+        
+        /**
+         * Create a set of orders with different date
+         */
+        Order order1 = new Order(6, new Date(2011, 6, 1), null, OrderStatus.PAID, DiscountStatus.NO_DISCOUNT, new BigDecimal("10.00"));
+        Order order2 = new Order(7, new Date(2011, 6, 3), null, OrderStatus.PAID, DiscountStatus.NO_DISCOUNT, new BigDecimal("10.00"));
+        Order order3 = new Order(8, new Date(2011, 6, 2), null, OrderStatus.PAID, DiscountStatus.NO_DISCOUNT, new BigDecimal("10.00"));
+        Order order4 = new Order(9, new Date(2011, 6, 4), null, OrderStatus.PAID, DiscountStatus.NO_DISCOUNT, new BigDecimal("10.00"));
+        
+        ordersWithDifferentDate = new LinkedHashSet<Order>();
+        ordersWithDifferentDate.add(order1);
+        ordersWithDifferentDate.add(order2);
+        ordersWithDifferentDate.add(order3);
+        ordersWithDifferentDate.add(order4);
+        
+        ordersSortedByDate = new LinkedList<Order>();
+        ordersSortedByDate.add(order1);
+        ordersSortedByDate.add(order3);
+        ordersSortedByDate.add(order2);
+        ordersSortedByDate.add(order4);
     }
     
     /**
@@ -131,7 +155,12 @@ public class CustomerTest {
      */
     @Test
     public void testGetOrdersByDateDescending() {
-    	fail();
+    	Customer c = new Customer(1,"Customer 1",ordersWithDifferentDate);
+    	
+    	List<Order> actualOrders = c.getOrdersByOrderedByDate(true);
+    	List<Order> expectedOrder = ordersSortedByDate; //manually sorted
+    	
+    	assertEquals(actualOrders, expectedOrder);
     }
     
 }
