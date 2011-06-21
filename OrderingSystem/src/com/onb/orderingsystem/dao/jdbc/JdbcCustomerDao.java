@@ -2,10 +2,17 @@ package com.onb.orderingsystem.dao.jdbc;
 
 import java.util.Set;
 
+import org.springframework.jdbc.core.JdbcTemplate;
+
 import com.onb.orderingsystem.dao.CustomerDao;
 import com.onb.orderingsystem.domain.Customer;
 
 public class JdbcCustomerDao implements CustomerDao {
+	private final JdbcTemplate jdbcTemplate;
+	
+	public JdbcCustomerDao(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
 
 	@Override
 	public Set<Customer> getCustomersWithCreditLimitNotExceeded() {
