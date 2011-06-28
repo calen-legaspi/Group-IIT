@@ -21,8 +21,7 @@
 		<springform:label path="author">Author:</springform:label>
 		<springform:select path="author">
 			<springform:option value="0" label="Select Author" />
-			<springform:options items="${authors}" itemValue="id"
-				itemLabel="name" />
+			<springform:options items="${authors}" itemValue="id" itemLabel="name" />
 		</springform:select>
 		<springform:errors path="author" cssStyle="color:red" />
 		<br />
