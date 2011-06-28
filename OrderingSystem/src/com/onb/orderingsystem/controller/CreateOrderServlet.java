@@ -22,20 +22,11 @@ public class CreateOrderServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		RequestDispatcher view = request.getRequestDispatcher("order_form");
+		RequestDispatcher view = request.getRequestDispatcher("/order_form");
 		
 		if(session.isNew()) {
-			
 		}
 		
 		view.forward(request, response);
 	}
-
-	/**
-	 * Receive Data.
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	}
-
 }

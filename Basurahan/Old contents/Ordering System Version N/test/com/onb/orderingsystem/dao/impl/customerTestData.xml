@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : customerTestData.xml
+    Created on : June 11, 2011, 10:26 AM
+    Author     : juliusmercons
+    Description:
+        Purpose of the document follows.
+-->
+
+<dataset>
+<!--"customers" table -->
+<customers id="1" name="Julius"/>
+<customers id="2" name="Mercons"/>
+
+<!--"orders" table -->
+<orders order_number="1" amount_with_discount="20.00" date="2010-10-10" customer_id="1" order_status="UNPAID"/>
+<orders order_number="2" amount_with_discount="20.00" date="2010-10-10" customer_id="2" order_status="UNPAID"/>
+</dataset>

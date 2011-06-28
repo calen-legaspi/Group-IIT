@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="src" path="testJUnit"/>
+	<classpathentry kind="src" path="testDBUnit"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-6-sun-1.6.0.24">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.springsource.sts.ide.tomcat.runtimeTarget/VMware vFabric tc Server Developer Edition (Runtime) v2.5">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/commons-logging-1.1.1/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/spring-framework-3.0.5/dist/org.springframework.aop-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/spring-framework-3.0.5/dist/org.springframework.aspects-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/spring-framework-3.0.5/dist/org.springframework.beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/spring-framework-3.0.5/dist/org.springframework.context.support-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/spring-framework-3.0.5/dist/org.springframework.context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/spring-framework-3.0.5/dist/org.springframework.core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/spring-framework-3.0.5/dist/org.springframework.expression-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/mysql-connector-java-5.1.16/mysql-connector-java-5.1.16-bin.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit-2.4.8.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/ant-1.5.4.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/ant-testutil-1.7.0.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/gsbase-2.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/h2-1.1.113.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/hsqldb-1.8.0.1.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/jcl-over-slf4j-1.5.6.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/junit-addons-1.4.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/logback-classic-0.9.15.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/mmmockobjects-1.12.0.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/mockobjects-core-0.07.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/mockobjects-jdk1.3-0.07.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/poi-3.2-FINAL.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/slf4j-api-1.5.6.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/jmock-2.5.1/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/jmock-2.5.1/hamcrest-library-1.1.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/jmock-2.5.1/jmock-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/spring-framework-3.0.5/dist/org.springframework.jdbc-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/spring-framework-3.0.5/dist/org.springframework.transaction-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/ant-1.7.0.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/ant-launcher-1.7.0.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/junit-3.8.2.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/junitperf-1.8.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/logback-core-0.9.15.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/xercesImpl-2.6.2.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/dbunit-2.4.8/dbunit_dependencies/xmlParserAPIs-2.6.2.jar"/>
+	<classpathentry kind="lib" path="/home/lyndon/git/Group-IIT/Dependencies/spring-framework-3.0.5/dist/org.springframework.asm-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

@@ -14,4 +14,24 @@
     <servlet-name>index</servlet-name>
     <url-pattern>/welcome</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>order_form</display-name>
+    <servlet-name>order_form</servlet-name>
+    <jsp-file>/WEB-INF/create_order/order_form.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>order_form</servlet-name>
+    <url-pattern>/order_form</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreateOrderServlet</display-name>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <servlet-class>com.onb.orderingsystem.controller.CreateOrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <url-pattern>/order</url-pattern>
+  </servlet-mapping>
 </web-app>
