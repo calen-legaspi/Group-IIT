@@ -9,11 +9,13 @@
 </head>
 <body>
 	<c:url var="listBook" value="/book/list"/>
+	<c:url var="editBook" value="/book/edit"/>
 	
-	<h1>Register Book</h1>
+	<h1>Edit Book</h1>
 	
 	<a href="${listBook}">Back</a>
-	<springform:form method="POST" commandName="book">
+	<springform:form action="${editBook}" method="POST" commandName="book">
+		<springform:hidden path="id"/>
 		<springform:label path="title">Book Title:</springform:label>
 		<springform:input path="title" />
 		<springform:errors path="title" cssStyle="color:red" />
@@ -24,7 +26,7 @@
 		</springform:select>
 		<springform:errors path="author" cssStyle="color:red" />
 		<br/>
-		<input type="submit" />
+		<input type="submit" value="Edit"/>
 	</springform:form>
 </body>
 </html>

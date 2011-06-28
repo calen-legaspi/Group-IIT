@@ -17,12 +17,19 @@
 		<th>ID</th>
 		<th>Title</th>
 		<th>Author</th>
+		<th>Edit</th>
+		<th>Delete</th>
 	</tr>
 	<c:forEach var="book" items="${books}">
+		<c:url var="editBook" value="/book/edit/${book.id}"/>
+		<c:url var="deleteBook" value="/book/delete/${book.id}"/>
+		
 		<tr>
 			<td><c:out value="${book.id}" /></td>
 			<td><c:out value="${book.title}" /></td>
 			<td><c:out value="${book.author}" /></td>
+			<td><a href="${editBook}">Edit</a></td>
+			<td><a href="${deleteBook}">X</a></td>
 		</tr>
 	</c:forEach>
 </table>

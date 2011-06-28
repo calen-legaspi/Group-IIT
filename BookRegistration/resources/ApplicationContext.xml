@@ -44,4 +44,11 @@
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" autowire="byType"/>
 	<tx:annotation-driven/>
 	
+	<!-- CustomBinder Init -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="webBindingInitializer">
+			<bean class="com.onb.bookreg.web.binder.GlobalBindingInitializer"/>
+		</property>
+	</bean>
+	
 </beans>
