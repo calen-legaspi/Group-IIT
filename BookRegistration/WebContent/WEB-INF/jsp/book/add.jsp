@@ -8,19 +8,24 @@
 <title>Book Registration</title>
 </head>
 <body>
-<h1>Register Book</h1>
+	<c:url var="listBook" value="/book/list"/>
+	
+	<h1>Register Book</h1>
+	
+	<a href="${listBook}">Back</a>
 	<springform:form method="POST" commandName="book">
 		<springform:label path="title">Book Title:</springform:label>
 		<springform:input path="title" />
-		<springform:errors path="title" cssStyle="color:red"/>
-		<br/>
+		<springform:errors path="title" cssStyle="color:red" />
+		<br />
 		<springform:label path="author">Author:</springform:label>
 		<springform:select path="author">
 			<springform:option value="0" label="Select Author" />
-			<springform:options items="${authors}" itemValue="id" itemLabel="name"/>
+			<springform:options items="${authors}" itemValue="id"
+				itemLabel="name" />
 		</springform:select>
-		<springform:errors path="author" cssStyle="color:red"/>
-		<br/>
+		<springform:errors path="author" cssStyle="color:red" />
+		<br />
 		<input type="submit" />
 	</springform:form>
 </body>

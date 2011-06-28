@@ -8,19 +8,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Add New Author</h1>
-	
 	<c:url var="listAuthor" value="/author/list"/>
-	<c:url var="submitURL" value="/author/add" />
 	
-	<springform:form action="${submitURL}" method="POST" commandName="author">
-		
+	<h1>Add New Author</h1>
+	<a href="${listAuthor}">Back</a>
+	<springform:form method="POST" commandName="author">
 		<springform:label path="name">Name</springform:label>
 		<springform:input path="name" />
 		<springform:errors path="name" cssStyle="color:red"/>
 		<input type="submit" />
 	</springform:form>
-	
-	<a href="${listAuthor}">Back</a>
 </body>
 </html>
