@@ -7,7 +7,7 @@
 <title>Book Registration Home Page</title>
 </head>
 <body>
-<h1>HOME!</h1>
+<h1>Modified HOME!</h1>
 <c:url value="/author/list" var="listAuthor"/>
 <c:url value="/book/list" var="listBook"/>
 
