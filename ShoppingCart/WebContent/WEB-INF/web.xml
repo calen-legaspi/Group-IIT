@@ -6,13 +6,16 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" 
 	version="3.0">
+	
 	<display-name>Shopping Cart</display-name>
 	
+	<!-- Application Initialization Stuffs -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			classpath:ApplicationContext.xml
-			classpath:Security.xml
+			classpath:applicationContext.xml
+			classpath:applicationContext-security.xml
+			classpath:applicationContext-webFlow.xml
 		</param-value>
 	</context-param>
 	
@@ -20,7 +23,7 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	
-	<!-- Dispatcher -->
+	<!-- Dispatcher/FrontController -->
 	<servlet>
 		<servlet-name>front-controller</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -43,4 +46,7 @@
   		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
+	<welcome-file-list>
+		<welcome-file>/home</welcome-file>
+	</welcome-file-list>
 </web-app>

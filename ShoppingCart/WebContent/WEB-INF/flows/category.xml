@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow 
+	xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/webflow
+		http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	start-state="start">
+	
+	<on-start>
+		<set name="flowScope.category" value="new com.onb.shoppingcart.domain.Category()" />
+	</on-start>
+
+	<view-state id="start" view="/category/add" model="category">
+		<on-render>
+			<set name="viewScope.categories" value="shoppingService.getCategories()" />
+		</on-render>
+		<transition to="submit" on="submitForm" />
+		<transition to="end" on="done"/>
+	</view-state>
+	
+	<action-state id="submit">
+		<evaluate expression="categoryService.create(category)" />
+		<transition to="fail" on-exception="java.lang.Exception" />
+		<transition to="success" />
+	</action-state>
+	
+	<view-state id="fail" view="/category/retry">
+		<transition to="start" on="tryAgain" />
+		<transition to="end" on="giveUp" />
+	</view-state>
+	
+	<view-state id="success" view="/category/success">
+		<transition to="addMore" on="addCategory"/>
+		<transition to="end" on="done"/>
+	</view-state>
+	
+	<end-state id="addMore" view="externalRedirect:/category" />
+	<end-state id="end" view="externalRedirect:/home" />
+	
+	<global-transitions>
+		<transition on="cancel" to="end" />
+	</global-transitions>
+	
+</flow>

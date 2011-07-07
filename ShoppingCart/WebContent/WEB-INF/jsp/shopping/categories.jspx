@@ -1,0 +1,36 @@
+<html 
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+>
+<jsp:output omit-xml-declaration="yes"/>
+<jsp:directive.page contentType="text/html;charset=UTF-8"/>
+<head>
+<title>Categories </title>
+</head>
+<body>
+<![CDATA[
+<a href="${flowExecutionUrl}&_eventId=cancel">Cancel Shopping</a> |
+]]>
+<a href="j_spring_security_logout">Logout ${currentUser.name}</a>
+<h1>Select Category:</h1>
+<table>
+	<tr>
+		<th>Category</th>
+		<th>Item Count</th>
+	</tr>
+	<c:forEach var="category" items="${categories}">
+		<tr>
+			<![CDATA[
+			<td>
+				<a href="${flowExecutionUrl}&_eventId=selectCategory&categoryId=${category.id}">
+				${category}
+				</a>
+			</td>
+			]]>
+			<td>${category.size}</td>
+		</tr>
+	</c:forEach>
+</table>
+</body>
+</html>

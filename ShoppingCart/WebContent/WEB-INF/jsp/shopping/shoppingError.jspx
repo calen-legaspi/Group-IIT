@@ -1,0 +1,19 @@
+<html 
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+>
+<jsp:output omit-xml-declaration="yes"/>
+<jsp:directive.page contentType="text/html;charset=UTF-8"/>
+<head>
+<title>Transaction Error</title>
+</head>
+<body>
+<h1 style="color:red"><b>ERROR</b></h1>
+<h2>Some Items may Contain Invalid Amounts!</h2>
+<![CDATA[
+<a href="${flowExecutionUrl}&_eventId=clickOk">OK</a>
+]]>
+</table>
+</body>
+</html>

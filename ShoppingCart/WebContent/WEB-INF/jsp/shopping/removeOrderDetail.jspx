@@ -1,0 +1,38 @@
+<html 
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+>
+<jsp:output omit-xml-declaration="yes"/>
+<jsp:directive.page contentType="text/html;charset=UTF-8"/>
+<head>
+<title>View Products</title>
+</head>
+<body>
+<![CDATA[
+<a href="${flowExecutionUrl}&_eventId=cancelRemove">Cancel Remove</a> |
+]]>
+<a href="j_spring_security_logout">Logout ${currentUser.name}</a>
+<h1>Remove from Cart: </h1>
+Product: ${currentOrderDetail.product.name}<br/>
+Quantity in Cart: ${currentOrderDetail.quantity}<br/>
+Quantity Remaining: ${currentOrderDetail.product.quantity - currentOrderDetail.quantity}<br/>
+Unit Price: ${currentOrderDetail.unitPrice}
+<form:form>
+	<input type="hidden" name="_flowExecutionKey" value="${flowExecutionKey}"/>
+	Quantity:
+	<select name="quantity">
+		<c:forEach var="q" begin="0" end="${currentOrderDetail.quantity}">
+			<c:if test="${q == currentOrderDetail.quantity}">
+					<option selected="selected" value="${q}">${q}</option>
+			</c:if>
+			<c:if test="${q != currentOrderDetail.quantity}">
+					<option value="${q}">${q}</option>
+			</c:if>
+			
+		</c:forEach>
+	</select>
+	<input type="submit" name="_eventId_submitForm" value="Remove from Cart"/>
+</form:form>
+</body>
+</html>

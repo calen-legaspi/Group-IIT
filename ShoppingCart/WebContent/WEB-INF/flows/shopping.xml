@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow 
+	xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/webflow
+		http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	start-state="displayCategories">
+	
+	<on-start>
+		<set name="flowScope.shoppingSession" value="new com.onb.shoppingcart.web.sessionmanager.ShoppingSessionManager()" type="com.onb.shoppingcart.web.sessionmanager.ShoppingSessionManager" />
+		<set name="flowScope.shoppingSession.categories" value="categoryService.getAll()" />
+		<set name="flowScope.shoppingSession.order" value="new com.onb.shoppingcart.domain.Order()" />
+		<set name="flowScope.shoppingSession.order.user" value="shoppingService.getUserByUsername(currentUser.name)" />
+	</on-start>
+
+	<view-state id="displayCategories" view="/shopping/categories">
+		<on-render>
+			<set name="viewScope.categories" value="shoppingSession.getCategories()" />
+		</on-render>
+		
+		<transition to="displayProducts" on="selectCategory">
+			<set name="flowScope.shoppingSession.currentCategory" value="shoppingSession.findCategoryById(requestParameters.categoryId)" />
+		</transition>
+		
+		<transition to="shoppingCancelled" on="cancel" />
+		<transition to="shoppingCart" on="showCart"/>	
+	</view-state>
+	
+	<view-state id="displayProducts" view="/shopping/products">
+		<on-render>
+			<set name="viewScope.selectedCategory" value="shoppingSession.getCurrentCategory()"></set>
+		</on-render>
+		
+		<transition to="addToCartForm" on="selectProduct">
+			<set name="flowScope.shoppingSession.currentOrderDetail" value="shoppingSession.generateOrderDetail(requestParameters.productId)" />
+		</transition>
+		<transition to="displayCategories" on="changeCategory"/>
+		<transition to="shoppingCancelled" on="cancel" />
+		<transition to="shoppingCart" on="showCart"/>
+	</view-state>
+	
+	<view-state id="addToCartForm" view="/shopping/addOrderDetail">
+		<on-render>
+			<set name="viewScope.currentOrderDetail" value="shoppingSession.getCurrentOrderDetail()" />
+		</on-render>
+	
+		<transition to="displayProducts" on="submitForm">
+			<set name="flowScope.shoppingSession.currentOrderDetail.quantity" value="requestParameters.quantity" />
+			<evaluate expression="shoppingSession.getOrder().setOrderDetail(currentOrderDetail)" />
+		</transition>
+		<transition to="displayProducts" on="cancelAdd" />
+	</view-state>
+	
+	<view-state id="shoppingCart" view="/shopping/cart">
+		<on-render>
+			<set name="viewScope.order" value="shoppingSession.getOrder()" />
+		</on-render>
+	
+		<transition to="displayProducts" on="continueShopping"/>
+		<transition to="removeItem" on="removeItem">
+			<set name="flowScope.shoppingSession.currentOrderDetail" value="shoppingSession.generateOrderDetail(requestParameters.productId)" />
+		</transition>
+		<transition to="doCheckout" on="checkout"/>
+		<transition to="shoppingCart" on="clearCart">
+			<evaluate expression="shoppingSession.getOrder().clearOrderDetails()" />
+		</transition>
+		<transition to="shoppingCancelled" on="cancel" />
+	</view-state>
+	
+	<view-state id="removeItem" view="/shopping/removeOrderDetail">
+		<on-render>
+			<set name="viewScope.currentOrderDetail" value="shoppingSession.getCurrentOrderDetail()" />
+		</on-render>
+		<transition to="shoppingCart" on="submitForm">
+			<evaluate expression="shoppingSession.getCurrentOrderDetail().remove(requestParameters.quantity)" />
+		</transition>
+		<transition to="shoppingCart" on="cancelRemove"/>
+	</view-state>
+	
+	<action-state id="doCheckout">
+		<evaluate expression="shoppingService.checkout(shoppingSession.order)" />
+		<transition to="serviceError" on-exception="com.onb.shoppingcart.services.exceptions.InsufficientInventoryException" />
+		<transition to="showThankYou"/>
+	</action-state>
+	
+	<view-state id="serviceError" view="/shopping/shoppingError">
+		<transition to="displayProducts" on="clickOk"/>
+	</view-state>
+	
+	<view-state id="showThankYou" view="/shopping/thankYou">
+		<on-render>
+			<set name="viewScope.order" value="shoppingSession.getOrder()" />
+		</on-render>
+		<transition to="shoppingSuccess" on="clickOk" />
+	</view-state>
+	
+	<end-state id="shoppingSuccess"  view="externalRedirect:/home"/>
+	<end-state id="shoppingCancelled" view="externalRedirect:/home" />
+	
+</flow>

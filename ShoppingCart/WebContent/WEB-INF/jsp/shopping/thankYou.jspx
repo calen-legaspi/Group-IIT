@@ -1,0 +1,18 @@
+<html 
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:form="http://www.springframework.org/tags/form"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+>
+<jsp:output omit-xml-declaration="yes"/>
+<jsp:directive.page contentType="text/html;charset=UTF-8"/>
+<head>
+<title>Checkout</title>
+</head>
+<body>
+<h1>Thank You ${order.user.username}</h1>
+<b>Total Amount of Orders: ${order.totalAmount} Php</b>
+<![CDATA[
+<a href="${flowExecutionUrl}&_eventId=clickOk">OK</a>
+]]>
+</body>
+</html>
