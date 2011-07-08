@@ -13,6 +13,6 @@ class Role {
 	}
 
     String toString() {
-        authority.replaceFirst("ROLE_","");
+        "$authority"
     }
 }

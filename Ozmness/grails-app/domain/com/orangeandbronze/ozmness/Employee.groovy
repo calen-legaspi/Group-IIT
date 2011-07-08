@@ -21,11 +21,10 @@ class Employee extends User {
     }
 
     /**
-     * Override the default.
      * Make sure that the mentor is a different instance.
      * @param mentor
      */
-    public void setMentor(Employee mentor) {
+    void setMentor(Employee mentor) {
         if(this.equals(mentor)) {
             throw new Exception("Circular reference on field: mentor");
         }
