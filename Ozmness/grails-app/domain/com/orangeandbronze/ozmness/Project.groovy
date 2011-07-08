@@ -8,7 +8,7 @@ class Project {
 
     static constraints = {
         name(blank: false)
-        lead()
+        lead(nullable: true)
     }
 
     String toString() {

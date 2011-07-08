@@ -6,10 +6,10 @@ class Rating {
 
     static constraints = {
         technology(blank: false)
-        value(blank: false, min: 1, max: 3)
+        value(range: 1..3)
     }
 
     String toString() {
-        "$rated $technology $value"
+        "$technology $value"
     }
 }
