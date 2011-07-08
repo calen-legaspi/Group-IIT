@@ -1,2 +1,2 @@
 set /p param=CREATE SERVICE:
-grails create-service .%param%
+grails create-service %param%

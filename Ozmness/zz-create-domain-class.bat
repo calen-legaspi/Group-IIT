@@ -1,2 +1,2 @@
 set /p param=DOMAIN CLASS:
-grails create-domain-class .%param%
+grails create-domain-class %param%

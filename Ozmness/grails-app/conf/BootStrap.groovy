@@ -4,7 +4,7 @@ class BootStrap {
     def springSecurityService
 
     def init = { servletContext ->
-		def roles = [:]
+		/*def roles = [:]
 		def users = [:]
 
 		roles.admin = Role.findByAuthority("ROLE_ADMIN") ?: new Role(authority: "ROLE_ADMIN").save();
@@ -19,7 +19,7 @@ class BootStrap {
 				passwordExpired: false
 			).save();
 
-		UserRole.create( users.admin, roles.admin )
+		UserRole.create( users.admin, roles.admin )*/
 	}
 
 	def destroy = {

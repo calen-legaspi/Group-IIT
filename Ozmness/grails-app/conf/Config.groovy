@@ -97,15 +97,13 @@ grails.plugins.springsecurity.authority.className = 'com.orangeandbronze.ozmness
 import grails.plugins.springsecurity.SecurityConfigType
 
 grails.plugins.springsecurity.rejectIfNoRule = false
-grails.plugins.springsecurity.securityConfigType = SecurityConfigType.InterceptUrlMap
-grails.plugins.springsecurity.interceptUrlMap = [
+grails.plugins.springsecurity.securityConfigType = SecurityConfigType.Annotation
+grails.plugins.springsecurity.controllerAnnotations.staticRules = [
 	'/':	 	    ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	"/image/**":	['IS_AUTHENTICATED_ANONYMOUSLY'],
 	"/js/**":	    ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	"/css/**":	    ['IS_AUTHENTICATED_ANONYMOUSLY'],
 	"/images/**":	['IS_AUTHENTICATED_ANONYMOUSLY'],
 	"/login/**":	['IS_AUTHENTICATED_ANONYMOUSLY'],
-	"/logout/**":	['IS_AUTHENTICATED_ANONYMOUSLY'],
-    "/employee/**":	['ROLE_ADMIN']
-
+	"/logout/**":	['IS_AUTHENTICATED_ANONYMOUSLY']
 ]
