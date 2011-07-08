@@ -9,4 +9,8 @@
 *.netbeans_update_resources
 *.eap
 *build.xml
+*.bat
 Dependencies/*
+Ozmness/target
+*.log
+Ozmness/web-app/WEB-INF/classes

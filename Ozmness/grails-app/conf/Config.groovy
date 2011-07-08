@@ -74,17 +74,38 @@ log4j = {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
 
-    error  'org.codehaus.groovy.grails.web.servlet',  //  controllers
-           'org.codehaus.groovy.grails.web.pages', //  GSP
-           'org.codehaus.groovy.grails.web.sitemesh', //  layouts
+    error  'org.codehaus.groovy.grails.web.servlet',        //  controllers
+           'org.codehaus.groovy.grails.web.pages',          //  GSP
+           'org.codehaus.groovy.grails.web.sitemesh',       //  layouts
            'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
-           'org.codehaus.groovy.grails.web.mapping', // URL mapping
-           'org.codehaus.groovy.grails.commons', // core / classloading
-           'org.codehaus.groovy.grails.plugins', // plugins
-           'org.codehaus.groovy.grails.orm.hibernate', // hibernate integration
+           'org.codehaus.groovy.grails.web.mapping',        // URL mapping
+           'org.codehaus.groovy.grails.commons',            // core / classloading
+           'org.codehaus.groovy.grails.plugins',            // plugins
+           'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 
     warn   'org.mortbay.log'
 }
+
+// Added by the Spring Security Core plugin:
+grails.plugins.springsecurity.userLookup.userDomainClassName = 'com.orangeandbronze.ozmness.User'
+grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'com.orangeandbronze.ozmness.UserRole'
+grails.plugins.springsecurity.authority.className = 'com.orangeandbronze.ozmness.Role'
+
+import grails.plugins.springsecurity.SecurityConfigType
+
+grails.plugins.springsecurity.rejectIfNoRule = false
+grails.plugins.springsecurity.securityConfigType = SecurityConfigType.InterceptUrlMap
+grails.plugins.springsecurity.interceptUrlMap = [
+	'/':	 	    ['IS_AUTHENTICATED_ANONYMOUSLY'],
+	"/image/**":	['IS_AUTHENTICATED_ANONYMOUSLY'],
+	"/js/**":	    ['IS_AUTHENTICATED_ANONYMOUSLY'],
+	"/css/**":	    ['IS_AUTHENTICATED_ANONYMOUSLY'],
+	"/images/**":	['IS_AUTHENTICATED_ANONYMOUSLY'],
+	"/login/**":	['IS_AUTHENTICATED_ANONYMOUSLY'],
+	"/logout/**":	['IS_AUTHENTICATED_ANONYMOUSLY'],
+    "/employee/**":	['ROLE_ADMIN']
+
+]
