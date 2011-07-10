@@ -1,21 +1,22 @@
 package com.orangeandbronze.ozmness
 
-class EmployeeRating extends Rating {
+class EmployeeRating {
+    Technology technology
+    Integer value
     String comment
-    Date dateCreated
-    Employee creator
     Employee rated
-
-    static belongsTo = [Employee]
+    Employee creator
+    Date dateCreated
 
     static constraints = {
-        comment()
-        dateCreated()
-        creator(blank: false)
-        rated(blank: false)
+        technology(nullable: false)
+        value(range: 1..3)
+        comment(blank: true)
+        rated(nullable: false)
+        creator(nullable: false)
     }
 
     String toString() {
-        "$rated $technology[$value/3] by $creator"
+        "$technology[$value] by $creator"
     }
 }

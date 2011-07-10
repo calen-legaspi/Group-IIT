@@ -20,6 +20,17 @@ class BootStrap {
 			).save();
 
 		UserRole.create( users.admin, roles.admin )
+
+        /*Project p = new Project()
+        p.name = "Project X"
+        Employee e = new Employee()
+        e.firstName = "Awesome"
+        e.lastName = "Not Awesome"
+        e.position = Position.get(1)
+        e.add
+        e.addToProjects(p)
+        p.save()
+        e.save()*/
 	}
 
 	def destroy = {

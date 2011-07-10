@@ -3,25 +3,23 @@ package com.orangeandbronze.ozmness
 class Employee extends User {
     String firstName
     String lastName
-    Employee mentor
     Position position
-
-    static hasMany = [projects:Project, ratings:EmployeeRating]
-    static mappedBy = [ratings:'rated']
+    Employee mentor
 
     static constraints = {
         firstName(blank: false)
         lastName(blank: false)
-        mentor()
         position(blank: false)
+        mentor(null: true)
     }
 
     String toString() {
-        "$firstName $lastName"
+        "$firstName $lastName [$position]"
     }
 
     /**
      * Make sure that the mentor is a different instance.
+     * Self-studies don't count.
      * @param mentor
      */
     void setMentor(Employee mentor) {

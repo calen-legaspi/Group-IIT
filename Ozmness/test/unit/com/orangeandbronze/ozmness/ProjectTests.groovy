@@ -8,7 +8,9 @@ class ProjectTests extends GrailsUnitTestCase {
     protected void setUp() {
         super.setUp()
         mockDomain(Project)
+        mockDomain(Employee)
         p = new Project()
+        p.lead = new Employee()
     }
 
     protected void tearDown() {
